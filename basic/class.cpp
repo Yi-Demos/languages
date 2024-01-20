@@ -3,22 +3,22 @@
 using namespace std;
 
 class Cat {
-  public:
-    Cat(string name) {
-        this->name = name;
-        this->barking = "meow";
-    }
+ public:
+  Cat(string name) {
+    this->name = name;
+    this->barking = "meow";
+  }
 
-    void saySomething();
+  void saySomething();
 
-    // void saySomething() {
-    //     cout << this->name << ": " << this->barking
-    //         << endl;
-    // }
+  // void saySomething() {
+  //     cout << this->name << ": " << this->barking
+  //         << endl;
+  // }
 
-  private:
-    string name;
-    string barking;
+ private:
+  string name;
+  string barking;
 };
 
 void Cat::saySomething() {
@@ -26,13 +26,13 @@ void Cat::saySomething() {
 }
 
 int main() {
-    Cat c1("Alice");
-    Cat c2("Bob");
+  Cat c1("Alice");
+  Cat c2("Bob");
 
-    c1.saySomething();
-    c2.saySomething();
+  c1.saySomething();
+  c2.saySomething();
 
-    return 0;
+  return 0;
 }
 
 // #include <iostream>
