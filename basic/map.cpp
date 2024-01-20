@@ -3,11 +3,9 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
   map<int, int> mapTest;
-  for (int i = 0; i < 10; i++)
-    mapTest[i] = i * 100;
+  for (int i = 0; i < 10; i++) mapTest[i] = i * 100;
 
   mapTest[5] = 1000;
 

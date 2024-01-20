@@ -1,14 +1,13 @@
 #include <stdio.h>
 
-int cal (int num) {
-  num +=1;
+int cal(int num) {
+  num += 1;
 
   return num;
 }
 
-int main()
-{
-  int i  = 0;
+int main() {
+  int i = 0;
 
   cal(i);
 
