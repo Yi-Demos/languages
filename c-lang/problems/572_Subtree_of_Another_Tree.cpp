@@ -36,7 +36,7 @@ int main() {
   vector<int> subRoot = {4, 1, 2};
 
   Solution solution;
-  solution.isSubtree(v);
+  solution.isSubtree();
 
   return 0;
 }
