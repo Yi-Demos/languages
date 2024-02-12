@@ -6,20 +6,27 @@ const nums = [1];
  * @return {number}
  */
 var majorityElement = function(nums) {
-  let score = {};
-  let max = 0;
+  let hashMap = {};
+  let maxKey;
+  let maxValue = 0;
 
   for (let num of nums) {
-      if (score[num]) {
-          score[num] = score[num] + 1;
+      if (hashMap[num]) {
+          hashMap[num] = hashMap[num] + 1;
       } else {
-          score[num] = 1;
+          hashMap[num] = 1;
       }
 
-      if (score[num] > max) max = score[num];
+      if (hashMap[num] > maxValue) {
+        maxKey = num;
+        maxValue = hashMap[num];
+      }
   }
 
-  return Object.keys(score).find(key => score[key] === max);
+  // NOTE: store key in loop then no need to use Object.keys() find it
+  // return Object.keys(hashMap).find(key => hashMap[key] === max);
+
+  return maxKey;
 };
 
 majorityElement(nums);
