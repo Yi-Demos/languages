@@ -11,9 +11,9 @@ var majorityElement = function (nums) {
   let ans = [];
 
   for (let num of nums) {
-      hash[num] = hash[num] ? hash[num] + 1: 1;
+    hash[num] = hash[num] ? hash[num] + 1 : 1;
 
-      if (hash[num] > border) ans.push(num);
+    if (hash[num] > border) ans.push(num);
   }
 
   return [...new Set(ans)];
