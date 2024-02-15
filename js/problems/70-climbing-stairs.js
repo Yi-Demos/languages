@@ -16,17 +16,33 @@ const climbStairs = function (n) {
   // if (n < 2) return 1;
 
   // Method 2
-  let prev = 0;
-  let cur = 1;
-  let sum = 0;
+  // let prev = 0;
+  // let cur = 1;
+  // let sum = 0;
 
-  for (let i = 0; i < n; i++) {
-    sum = prev + cur;
-    prev = cur;
-    cur = sum;
+  // for (let i = 0; i < n; i++) {
+  //   sum = prev + cur;
+  //   prev = cur;
+  //   cur = sum;
+  // }
+
+  // return cur;
+
+  // Method 3
+  // pre-defined
+  if (n < 4) return n;
+
+  let prevStep1 = 1;
+  let prevStep2 = 1;
+  let fib = 0;
+
+  for (let i = 2; i <= n; i++) {
+    fib = prevStep1 + prevStep2;
+    prevStep1 = prevStep2;
+    prevStep2 = fib;
   }
 
-  return cur;
+  return fib;
 };
 
 const ans = climbStairs(3);
