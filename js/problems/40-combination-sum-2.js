@@ -20,3 +20,5 @@ var combinationSum2 = function (candidates, target) {
 
   return result;
 };
+
+combinationSum2()

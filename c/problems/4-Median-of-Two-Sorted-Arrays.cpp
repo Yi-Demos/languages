@@ -42,8 +42,10 @@ class Solution {
     int totalSize = nums1.size() + nums2.size();
 
     if (totalSize % 2 == 0) {
-      for (int x : nums1) } else {
-      ans =
+      for (int x : nums1) {
+      }
+    } else {
+      ans = 0;
     }
 
     return ans;

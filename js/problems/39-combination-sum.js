@@ -25,13 +25,15 @@ var combinationSum = function (candidates, target) {
   return result;
 };
 
+combinationSum()
+
 /**
  * @param {number[]} candidates
  * @param {number} target
  * @return {number[][]}
  */
 
-var combinationSum = function (candidates, target) {
+var combinationSum2 = function (candidates, target) {
   let result = [];
   candidates = candidates.sort();
 
@@ -48,3 +50,5 @@ var combinationSum = function (candidates, target) {
 
   return result;
 };
+
+combinationSum2()

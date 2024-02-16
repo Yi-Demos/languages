@@ -17,5 +17,9 @@
  * @return {number}
  */
 var countSubstrings = function (s) {
-  for (let i = 0; i < s.length; i++) {}
+  for (let i = 0; i < s.length; i++) {
+    console.log(i);
+  }
 };
+
+countSubstrings()
