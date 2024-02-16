@@ -34,7 +34,7 @@ int main() {
     cout << "not found";
   }
 
-  cout << ust.find(1);
+  // cout << ust.find(1);
 
   display(ust);
 
