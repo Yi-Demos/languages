@@ -10,7 +10,7 @@ class Solution {
 int main() {
   Solution solution;
 
-  cout << solution.generate();
+  // cout << solution.generate();
 
   cout << "\n\n";
   return 0;
