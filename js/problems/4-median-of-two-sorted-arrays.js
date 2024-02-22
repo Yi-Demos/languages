@@ -12,4 +12,4 @@ var findMedianSortedArrays = function (nums1, nums2) {
   return (arr[half - 1] + arr[half]) / 2;
 };
 
-findMedianSortedArrays()
+findMedianSortedArrays();

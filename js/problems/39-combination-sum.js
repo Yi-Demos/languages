@@ -25,7 +25,7 @@ var combinationSum = function (candidates, target) {
   return result;
 };
 
-combinationSum()
+combinationSum();
 
 /**
  * @param {number[]} candidates
@@ -51,4 +51,4 @@ var combinationSum2 = function (candidates, target) {
   return result;
 };
 
-combinationSum2()
+combinationSum2();
