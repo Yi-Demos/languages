@@ -1,4 +1,4 @@
-const arr = [ 1, 2, 3, 4, 5, 6 ];
+const arr = [1, 2, 3, 4, 5, 6];
 
 const find = (target) => {
   let left = 0;
@@ -13,7 +13,7 @@ const find = (target) => {
   }
 
   return -1;
-}
+};
 
 const result = find(3);
 

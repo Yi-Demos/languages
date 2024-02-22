@@ -22,4 +22,4 @@ var countSubstrings = function (s) {
   }
 };
 
-countSubstrings()
+countSubstrings();
