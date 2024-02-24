@@ -1,0 +1,15 @@
+{
+	"parser": "babel",
+	"trailingComma": "all",
+	"tabWidth": 2,
+	"singleQuote": false,
+	"printWidth": 120,
+	"semi": true,
+	"arrowParens": "always",
+	"bracketSpacing": true,
+	"bracketSameLine": true,
+	"proseWrap": "preserve",
+	"quoteProps": "as-needed",
+	"requirePragma": true,
+	"htmlWhitespaceSensitivity": "css"
+}
