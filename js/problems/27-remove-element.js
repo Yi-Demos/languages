@@ -3,7 +3,7 @@
  * @param {number} val
  * @return {number}
  */
-var removeElement = function(nums, val) {
+var removeElement = function (nums, val) {
   let cur = 0;
 
   for (let i = 0; i < nums.length; i++) {
@@ -17,4 +17,4 @@ var removeElement = function(nums, val) {
   return nums;
 };
 
-console.log(removeElement([3,2,2,3], 3));
+console.log(removeElement([3, 2, 2, 3], 3));
