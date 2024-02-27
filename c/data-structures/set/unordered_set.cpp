@@ -28,13 +28,13 @@ int main() {
   ust.insert({7, 8, 9});
 
   // check if num has alreay existed in set
+  // ust.count(1) same as ust.find(1) !== ust.end()
+
   if (ust.count(1)) {
     cout << "found";
   } else {
     cout << "not found";
   }
-
-  // cout << ust.find(1);
 
   display(ust);
 
