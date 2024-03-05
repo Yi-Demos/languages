@@ -7,7 +7,8 @@ using namespace std;
 int gcd(int x, int y) { return y == 0 ? x : gcd(y, x % y); }
 
 int main() {
-  cout << gcd(20, 5);
+  cout << gcd(20, 5) << "\n";
+  cout << gcd(5, 20) << "\n";
 
   return 0;
 }
