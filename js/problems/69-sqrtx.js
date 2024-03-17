@@ -17,5 +17,20 @@ var mySqrt = function (x) {
 
   // Method 3: binary search
 
+  let l = 1;
+  let r = x;
+  let mid = (1 + x) / 2;
 
+  while (l < r) {
+    mid = Math.floor(mid);
+    squared = mid * mid;
+
+    if (squared === x | mid === l) {
+      return mid;
+    } else if (squared > x) {
+      r = mid;
+    } else {
+      l = mid
+    }
+  }
 };
