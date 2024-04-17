@@ -2,7 +2,7 @@
  * @param {string} s
  * @return {number}
  */
-var longestPalindrome = function(s) {
+var longestPalindrome = function (s) {
   const obj = {};
   let sum = 0;
 
@@ -10,7 +10,7 @@ var longestPalindrome = function(s) {
     const key = s[i];
 
     if (obj[key] == 1) {
-      sum+=2;
+      sum += 2;
       obj[key] = 0;
     } else {
       obj[key] = 1;
