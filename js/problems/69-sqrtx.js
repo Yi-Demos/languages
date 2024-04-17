@@ -25,12 +25,12 @@ var mySqrt = function (x) {
     mid = Math.floor(mid);
     squared = mid * mid;
 
-    if (squared === x | mid === l) {
+    if ((squared === x) | (mid === l)) {
       return mid;
     } else if (squared > x) {
       r = mid;
     } else {
-      l = mid
+      l = mid;
     }
   }
 };
