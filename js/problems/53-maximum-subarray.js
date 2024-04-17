@@ -3,17 +3,31 @@
  * @return {number}
  */
 var maxSubArray = function (nums) {
-  let max = 0;
-  let sum = 0;
+  // Recursive Approach
+  // let max = 0;
+  // let sum = 0;
 
-  for (let i = 0; i < nums.length; i++) {
-    sum = 0
+  // for (let i = 0; i < nums.length; i++) {
+  //   sum = 0
 
-    for (let j = i; j < nums.length; j++) {
-      sum += nums[j];
+  //   for (let j = i; j < nums.length; j++) {
+  //     sum += nums[j];
 
-      if (sum > max) max = sum;
-    }
+  //     if (sum > max) max = sum;
+  //   }
+  // }
+
+  // return max;
+
+  // Dynamic Programming Approach
+  let max = nums[0];
+
+  if (nums.length === 1) return nums[0];
+
+  for (let i = 1; i < nums.length; i++) {
+    nums[i] = Math.max(nums[i], nums[i] + nums[i - 1]);
+
+    if (nums[i] > max) max = nums[i]
   }
 
   return max;
