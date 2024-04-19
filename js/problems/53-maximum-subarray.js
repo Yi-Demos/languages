@@ -27,7 +27,7 @@ var maxSubArray = function (nums) {
   for (let i = 1; i < nums.length; i++) {
     nums[i] = Math.max(nums[i], nums[i] + nums[i - 1]);
 
-    if (nums[i] > max) max = nums[i]
+    if (nums[i] > max) max = nums[i];
   }
 
   return max;
