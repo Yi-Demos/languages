@@ -20,6 +20,6 @@ function bonAppetit(bill, k, b) {
   }
 }
 
-console.log(bonAppetit([3, 10, 2, 9], 1, 12)); // 5
+bonAppetit([3, 10, 2, 9], 1, 12); // 5
 
-console.log(bonAppetit([3, 10, 2, 9], 1, 7)); // Bon Appetit
+bonAppetit([3, 10, 2, 9], 1, 7); // Bon Appetit
