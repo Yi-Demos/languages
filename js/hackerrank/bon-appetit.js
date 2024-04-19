@@ -1,0 +1,23 @@
+// bill: an array of integers representing the cost of each item ordered
+// k: an integer representing the zero-based index of the item Anna doesn't eat
+// b: the amount of money that Anna contributed to the bill
+
+function bonAppetit(bill, k, b) {
+  // Write your code here
+  let sum = 0;
+
+  for (let i = 0; i < bill.length; i++) {
+    if (i !== k) sum += bill[i];
+  }
+
+  let payment = sum / 2;
+
+  if (payment >= b) {
+    console.log("Bon Appetit");
+  } else {
+    console.log(b - payment);
+  }
+}
+
+console.log(bonAppetit([3, 10, 2, 9], 1, 12)); // 5
+console.log(bonAppetit([3, 10, 2, 9], 1, 7)); // Bon Appetit
