@@ -9,7 +9,7 @@ while (c > 0) {
   if (arr[c] === brr[c]) {
     c--;
   } else {
-    brr
+    brr;
   }
 }
 
