@@ -26,6 +26,5 @@ int main(int argc, char *argv[])
   	ptr=ptr->next;  //將ptr指向下一個節點
   }
 
-  system("PAUSE");
   return 0;
 }
