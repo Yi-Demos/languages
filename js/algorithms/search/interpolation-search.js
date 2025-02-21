@@ -9,7 +9,7 @@ function interpolationSearch(arr, target) {
 
   while (end >= start) {
     mid = Math.floor(
-      ((target - arr[start]) * (end - start)) / (arr[end] - arr[start]) + start
+      ((target - arr[start]) * (end - start)) / (arr[end] - arr[start]) + start,
     );
 
     if (arr[mid] === target) {

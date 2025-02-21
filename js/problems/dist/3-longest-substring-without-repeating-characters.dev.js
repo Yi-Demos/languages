@@ -23,7 +23,6 @@ var lengthOfLongestSubstring = function lengthOfLongestSubstring(s) {
 }; // lengthOfLongestSubstring("abcabcbb"); // 3
 // lengthOfLongestSubstring("bbbbb"); // 1
 
-
 lengthOfLongestSubstring("pwwkew"); // 3
 // lengthOfLongestSubstring(""); // 0
 // lengthOfLongestSubstring(" "); // 1

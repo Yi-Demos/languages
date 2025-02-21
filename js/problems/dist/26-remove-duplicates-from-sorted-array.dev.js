@@ -40,7 +40,6 @@ var removeDuplicates = function removeDuplicates(nums) {
 // 4 3 true
 // 0,1,2,3,4,2,2,3,3,4
 
-
 console.log(removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4])); //
 // 雙指針解法（Two Pointers）
 // 由於陣列已經排序，相同的數字會出現在相鄰位置，所以我們可以使用 雙指針 來就地去重。

@@ -89,23 +89,22 @@ console.log(removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));
 // - **時間複雜度 O(n)**，**空間複雜度 O(1)**（就地修改）。
 // - **核心操作：當 `nums[fast] ≠ nums[slow]`，將 `nums[fast]` 移動到 `slow + 1` 位置**。
 
-
 /**
  * @param {number[]} nums
  * @return {number}
  */
-var removeDuplicates = function(nums) {
+var removeDuplicates = function (nums) {
   if (nums.length === 0) return 0;
 
   let s = 0;
   let f = 1;
 
   for (let f = 1; f < nums.length; f++) {
-      if (nums[s] !== nums[f]) {
-          s++;
-          nums[s] = nums[f];
-      }
+    if (nums[s] !== nums[f]) {
+      s++;
+      nums[s] = nums[f];
+    }
   }
 
-  return s+1;
+  return s + 1;
 };
