@@ -1,12 +1,31 @@
 "use strict";
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+function _toConsumableArray(arr) {
+  return (
+    _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread()
+  );
+}
 
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance");
+}
 
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+function _iterableToArray(iter) {
+  if (
+    Symbol.iterator in Object(iter) ||
+    Object.prototype.toString.call(iter) === "[object Arguments]"
+  )
+    return Array.from(iter);
+}
 
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) {
+    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
+      arr2[i] = arr[i];
+    }
+    return arr2;
+  }
+}
 
 /**
  * @param {string[]} nums
@@ -21,30 +40,31 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 //   }
 //   return result;
 // };
-// hashmap
-function findDifferentBinaryString(nums) {
-  var n = nums.length;
-  var numSet = new Set(nums);
-  console.log(" n ", n);
-  console.log(" numSet ", numSet); // 生成所有长度为 n 的二进位字符串
+// hashmap algorithm
+var findDifferentBinaryString = function findDifferentBinaryString(nums) {
+  var numsSet = new Set(nums);
 
-  var generateBinaryStrings = function generateBinaryStrings(current) {
-    console.log(" current ", current);
-    if (current.length === n) return [current];
-    return [].concat(_toConsumableArray(generateBinaryStrings(current + "0")), _toConsumableArray(generateBinaryStrings(current + "1")));
+  var genAllNums = function genAllNums(current) {
+    if (current.length === nums[0].length) return [current];
+    return [].concat(
+      _toConsumableArray(genAllNums(current + "0")),
+      _toConsumableArray(genAllNums(current + "1")),
+    );
   };
 
-  var allBinaryStrings = generateBinaryStrings("");
-  console.log(" allBinaryStrings ", allBinaryStrings); // 查找不在 numSet 中的字符串
-
+  var allNums = genAllNums("");
   var _iteratorNormalCompletion = true;
   var _didIteratorError = false;
   var _iteratorError = undefined;
 
   try {
-    for (var _iterator = allBinaryStrings[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-      var str = _step.value;
-      if (!numSet.has(str)) return str;
+    for (
+      var _iterator = allNums[Symbol.iterator](), _step;
+      !(_iteratorNormalCompletion = (_step = _iterator.next()).done);
+      _iteratorNormalCompletion = true
+    ) {
+      var num = _step.value;
+      if (!numsSet.has(num)) return num;
     }
   } catch (err) {
     _didIteratorError = true;
@@ -62,8 +82,7 @@ function findDifferentBinaryString(nums) {
   }
 
   return "";
-} // test 1
-
+}; // test 1
 
 var nums1 = ["01", "10"];
 console.log(findDifferentBinaryString(nums1)); // output："11"

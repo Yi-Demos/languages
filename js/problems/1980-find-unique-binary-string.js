@@ -16,38 +16,24 @@
 //   return result;
 // };
 
-// hashmap
-function findDifferentBinaryString(nums) {
-  const n = nums.length;
-  const numSet = new Set(nums);
+// hashmap algorithm
+var findDifferentBinaryString = function (nums) {
+  const numsSet = new Set(nums);
 
-  console.log(" n ", n);
+  const genAllNums = (current) => {
+    if (current.length === nums[0].length) return [current];
 
-  console.log(" numSet ", numSet);
-
-  // 生成所有长度为 n 的二进位字符串
-  const generateBinaryStrings = (current) => {
-    console.log(" current ", current);
-
-    if (current.length === n) return [current];
-
-    return [
-      ...generateBinaryStrings(current + "0"),
-      ...generateBinaryStrings(current + "1"),
-    ];
+    return [...genAllNums(current + "0"), ...genAllNums(current + "1")];
   };
 
-  const allBinaryStrings = generateBinaryStrings("");
+  const allNums = genAllNums("");
 
-  console.log(" allBinaryStrings ", allBinaryStrings);
-
-  // 查找不在 numSet 中的字符串
-  for (const str of allBinaryStrings) {
-    if (!numSet.has(str)) return str;
+  for (const num of allNums) {
+    if (!numsSet.has(num)) return num;
   }
 
   return "";
-}
+};
 
 // test 1
 let nums1 = ["01", "10"];
