@@ -11,78 +11,83 @@ class BinarySearchTree {
     this.root = null;
   }
   insert(value) {
-    const newNode = new Node(value);
+    const insertNode = (node, value) => {
+      if (node === null) return new Node(value);
+      if (value < node.value) node.left = insertNode(node.left, value);
+      if (value > node.value) node.right = insertNode(node.right, value);
 
-    if (!this.root) {
-      this.root = newNode;
-      return this;
-    }
-
-    let current = this.root;
-
-    let _insert = (current) => {
-      if (value < current.value) {
-        if (current.left) return _insert(current.left);
-
-        current.left = newNode;
-        return this;
-      } else {
-        if (current.right) return _insert(current.right);
-
-        current.right = newNode;
-        return this;
-      }
+      return node;
     };
 
-    // while (true) {
-    //   if (value === current.value) return undefined;
-    //   if (value < current.value) {
-    //     if (!current.left) {
-    //       current.left = newNode;
-    //       return this;
-    //     }
-    //     current = current.left;
-    //   } else {
-    //     if (!current.right) {
-    //       current.right = newNode;
-    //       return this;
-    //     }
-    //     current = current.right;
-    //   }
-    // }
+    this.root = insertNode(this.root, value);
   }
   find() {}
-  BFS() {}
-  DFS() {}
+  // 廣度優先搜尋（BFS）
+  bfs() {
+    const queue = [this.root];
+    const result = [];
 
-  // 前序遍歷：根 -> 左 -> 右
-  preOrderTraversal(node, callback) {
-    if (node !== null) {
-      callback(node.value);
-      this.preOrderTraversal(node.left, callback);
-      this.preOrderTraversal(node.right, callback);
+    while (queue.length) {
+      const current = queue.shift();
+      result.push(current.value);
+
+      if (current.left) queue.push(current.left);
+      if (current.right) queue.push(current.right);
     }
+
+    return result
   }
-
-  // 中序遍歷：左 -> 根 -> 右
-  inOrderTraversal(node, callback) {
-    if (node !== null) {
-      this.inOrderTraversal(node.left, callback);
-      callback(node.value);
-      this.inOrderTraversal(node.right, callback);
-    }
+  // 深度優先搜尋（DFS） - 前序遍歷
+  dfsPreOrder() {
+    const result = [];
+    const traverse = (node) => {
+      if (node) {
+        result.push(node.value); // 訪問節點
+        traverse(node.left);     // 遍歷左子樹
+        traverse(node.right);    // 遍歷右子樹
+      }
+    };
+    traverse(this.root);
+    return result;
   }
+  // 深度優先搜尋（DFS） - 中序遍歷
+  dfsInOrder() {
+    const result = [];
+    const traverse = (node) => {
+      if (node) {
+        traverse(node.left);     // 遍歷左子樹
+        result.push(node.value); // 訪問節點
+        traverse(node.right);    // 遍歷右子樹
+      }
+    };
+    traverse(this.root);
+    return result;
+  }
+  // 深度優先搜尋（DFS） - 後序遍歷
+  dfsPostOrder() {
+    const result = [];
+    const traverse = (node) => {
+      if (node) {
+        traverse(node.left);     // 遍歷左子樹
+        traverse(node.right);    // 遍歷右子樹
+        result.push(node.value); // 訪問節點
+      }
+    };
+    traverse(this.root);
+    return result;
+  }
+  printTree(node, prefix = '', isLeft = true) {
+    if (node === null) return;
 
-  // 後序遍歷：左 -> 右 -> 根
-  postOrderTraversal(node, callback) {
-    if (node !== null) {
-      this.postOrderTraversal(node.left, callback);
-      this.postOrderTraversal(node.right, callback);
-      callback(node.value);
-    }
+    console.log(prefix + (isLeft ? '├── left : ' : '└── right : ') + node.value);
+
+    const newPrefix = prefix + (isLeft ? '│   ' : '    ');
+
+    this.printTree(node.left, newPrefix, true);
+    this.printTree(node.right, newPrefix, false);
   }
 }
-// 使用範例
+// test
 const tree = new BinarySearchTree();
 tree.insert(10);
 tree.insert(5);
@@ -91,6 +96,10 @@ tree.insert(3);
 tree.insert(7);
 tree.insert(12);
 tree.insert(18);
+tree.insert(17);
 
-console.log("前序遍歷:");
-tree.preOrderTraversal(tree.root, (value) => console.log(value));
+console.log("Traversal:");
+// tree.preOrderTraversal(tree.root, (value) => console.log(value));
+tree.printTree(tree.root);
+const bfs = tree.BFS();
+console.log("BFS:", bfs);
