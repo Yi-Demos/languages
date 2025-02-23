@@ -1,31 +1,31 @@
-#include <string>
-#include <unordered_set>
-#include <vector>
-
 class Solution {
-public:
+ public:
   string findDifferentBinaryString(vector<string>& nums) {
-      int n = nums.size();
-      unordered_set<string> numsSet(nums.begin(), nums.end());
-      string result;
+    prefixLength = nums.size();
+    string result = "";
+    set<string> numsSet = {nums.begin(), nums.end()};
 
-      if (generateBinaryString(n, "", numsSet, result)) return result;
+    // for (const string num : numsSet) {
+    //   cout << num;
+    // }
 
-      return "";
+    fillSets(numsSet, result, "");
+
+    return result;
   }
 
-private:
-  bool generateBinaryString(int n, string current, const unordered_set<string>& numsSet, string& result) {
-      if (current.length() == n) {
-          if (numsSet.find(current) == numsSet.end()) {
-              result = current;
-              return true;
-          }
-          return false;
-      }
-      if (generateBinaryString(n, current + "0", numsSet, result)) return true;
-      if (generateBinaryString(n, current + "1", numsSet, result)) return true;
+ private:
+  int prefixLength = 0;
 
-      return false;
+  string fillSets(const set<string>& numsSet, string& result, string current) {
+    if (current.size() < prefixLength) {
+      fillSets(numsSet, result, current + "0");
+      fillSets(numsSet, result, current + "1");
+    }
+
+    if (current.size() == prefixLength && !numsSet.contains(current))
+      result = current;
+
+    return result;
   }
 };

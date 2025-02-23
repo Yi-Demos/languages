@@ -9,42 +9,41 @@
  * };
  */
 class Solution {
-public:
-    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        ListNode* node = new ListNode();
-        ListNode* res = node;
+ public:
+  ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+    ListNode* node = new ListNode();
+    ListNode* res = node;
+ß
+    int carry = 0;
 
-        int carry = 0;
+    while (l1 || l2 || carry) {
+      int sum = 0;
 
-        while (l1 || l2 || carry) {
-            int sum = 0;
+      if (carry > 0) {
+        sum += carry;
+        carry = 0;
+      }
 
-            if (carry > 0) {
-                sum += carry;
-                carry = 0;
-            }
+      if (l1) {
+        sum += l1->val;
+        l1 = l1->next;
+      }
 
-            if (l1) {
-                sum += l1->val;
-                l1 = l1->next;
-            }
+      if (l2) {
+        sum += l2->val;
+        l2 = l2->next;
+      }
 
-            if (l2) {
-                sum += l2->val;
-                l2 = l2->next;
-            }
+      if (sum > 9) carry = 1;
 
-            if (sum > 9)
-                carry = 1;
+      sum = sum % 10;
 
-            sum = sum % 10;
-
-            node->next = new ListNode(sum);
-            node = node->next;
-        }
-
-        ListNode* result = res->next;
-
-        return result;
+      node->next = new ListNode(sum);
+      node = node->next;
     }
+
+    ListNode* result = res->next;
+
+    return result;
+  }
 };
