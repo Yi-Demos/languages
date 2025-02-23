@@ -14,27 +14,27 @@ int main() {
     mySet.insert(1); // 重复元素，不会被插入
 
     // 遍历并输出 set 中的元素
-    std::cout << "set 中的元素：";
+    cout << "set 中的元素：";
     for (const auto& elem : mySet) {
-        std::cout << elem << " ";
+        cout << elem << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
     // 查找元素
     auto search = mySet.find(2);
     if (search != mySet.end()) {
-        std::cout << "找到元素：2" << std::endl;
+        cout << "找到元素：2" << endl;
     } else {
-        std::cout << "未找到元素：2" << std::endl;
+        cout << "未找到元素：2" << endl;
     }
 
     // 删除元素
     mySet.erase(3);
-    std::cout << "删除元素 3 后，set 中的元素：";
+    cout << "删除元素 3 后，set 中的元素：";
     for (const auto& elem : mySet) {
-        std::cout << elem << " ";
+        cout << elem << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
     return 0;
 }
