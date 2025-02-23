@@ -1,5 +1,8 @@
 {
   "files.associations": {
+    "*.sqlbook": "sql",
+    "*.ndjson": "jsonl",
+    "*.dbclient-js": "javascript",
     "*.mjs": "javascript",
     "array": "cpp",
     "string_view": "cpp",
@@ -59,7 +62,8 @@
     "typeinfo": "cpp",
     "variant": "cpp",
     "algorithm": "cpp",
-    "unordered_set": "cpp"
+    "unordered_set": "cpp",
+    "set": "cpp"
   },
   "compile-hero.disable-compile-files-on-did-save-code": false
 }
