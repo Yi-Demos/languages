@@ -35,7 +35,7 @@ class BinarySearchTree {
       if (current.right) queue.push(current.right);
     }
 
-    return result
+    return result;
   }
   // 深度優先搜尋（DFS） - 前序遍歷
   dfsPreOrder() {
@@ -43,8 +43,8 @@ class BinarySearchTree {
     const traverse = (node) => {
       if (node) {
         result.push(node.value); // 訪問節點
-        traverse(node.left);     // 遍歷左子樹
-        traverse(node.right);    // 遍歷右子樹
+        traverse(node.left); // 遍歷左子樹
+        traverse(node.right); // 遍歷右子樹
       }
     };
     traverse(this.root);
@@ -55,9 +55,9 @@ class BinarySearchTree {
     const result = [];
     const traverse = (node) => {
       if (node) {
-        traverse(node.left);     // 遍歷左子樹
+        traverse(node.left); // 遍歷左子樹
         result.push(node.value); // 訪問節點
-        traverse(node.right);    // 遍歷右子樹
+        traverse(node.right); // 遍歷右子樹
       }
     };
     traverse(this.root);
@@ -68,20 +68,22 @@ class BinarySearchTree {
     const result = [];
     const traverse = (node) => {
       if (node) {
-        traverse(node.left);     // 遍歷左子樹
-        traverse(node.right);    // 遍歷右子樹
+        traverse(node.left); // 遍歷左子樹
+        traverse(node.right); // 遍歷右子樹
         result.push(node.value); // 訪問節點
       }
     };
     traverse(this.root);
     return result;
   }
-  printTree(node, prefix = '', isLeft = true) {
+  printTree(node, prefix = "", isLeft = true) {
     if (node === null) return;
 
-    console.log(prefix + (isLeft ? '├── left : ' : '└── right : ') + node.value);
+    console.log(
+      prefix + (isLeft ? "├── left : " : "└── right : ") + node.value,
+    );
 
-    const newPrefix = prefix + (isLeft ? '│   ' : '    ');
+    const newPrefix = prefix + (isLeft ? "│   " : "    ");
 
     this.printTree(node.left, newPrefix, true);
     this.printTree(node.right, newPrefix, false);
