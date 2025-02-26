@@ -8,6 +8,9 @@
 class Solution {
  public:
   vector<int> twoSum(vector<int>& nums, int target) {
+    // method 1: hashmap char counter
+    // time complexity: O(n)
+    // space complexity: O(n)
     unordered_map<int, int> numsMap;
 
     for (int i = 0; i < nums.size(); i++) {
