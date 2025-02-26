@@ -1,6 +1,10 @@
 class Solution {
  public:
   vector<vector<int>> generate(int numRows) {
+    // method 1
+    // time complexity: O(n^2)
+    // space complexity: O(n^2)
+
     vector<vector<int>> matrix(numRows);
 
     for (int i = 0; i < numRows; ++i) {
@@ -15,6 +19,3 @@ class Solution {
     return matrix;
   }
 };
-
-// time complexity: O(n^2)
-// space complexity: O(n^2)
