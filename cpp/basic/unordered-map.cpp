@@ -7,7 +7,7 @@ using namespace std;
 int main() {
   // init
   unordered_map<string, int> hash;
-  unordered_map<std::string, int> hash2 = {{"Tom", 1}, {"Ann", 4}, {"Jack", 2}};
+  unordered_map<string, int> hash2 = {{"Tom", 1}, {"Ann", 4}, {"Jack", 2}};
 
   hash.insert(pair<string, int>("John", 3));
 

@@ -10,6 +10,9 @@
 class Solution {
  public:
   string reverseVowels(string s) {
+    // method 1: hashmap char counter
+    // time complexity: O(n)
+    // space complexity: O(1)
     int l = 0;
     int r = s.size() - 1;
     unordered_set<char> vowels = {'a', 'e', 'i', 'o', 'u',
@@ -25,7 +28,7 @@ class Solution {
       }
 
       if (l < r) {
-        std::swap(s[l], s[r]);
+        swap(s[l], s[r]);
         ++l;
         --r;
       }
