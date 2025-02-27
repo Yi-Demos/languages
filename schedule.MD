@@ -51,12 +51,3 @@
 📌 **數論**
 - [ ] **最大公因數（GCD）**：[Greatest Common Divisor of Strings (1071)](https://leetcode.com/problems/greatest-common-divisor-of-strings/)
 - [ ] **質數篩法（Sieve of Eratosthenes）**：[Count Primes (204)](https://leetcode.com/problems/count-primes/)
-
----
-
-### **🔥 進一步提升**
-- 參加 **Codeforces Div.2** 或 **AtCoder Beginner Contest (ABC)**
-- LeetCode **Weekly Contest**
-- 閱讀 **《算法導論》**、**《競程演算法手冊》**
-
-這份題單可以幫你穩紮穩打地進步，你可以按照自己的節奏來練習！有沒有哪個部分想加強或需要更詳細的解釋？ 😊
