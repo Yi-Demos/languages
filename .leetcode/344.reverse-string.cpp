@@ -8,7 +8,7 @@
 class Solution {
  public:
   void reverseString(vector<char>& s) {
-    // method 1: simple loop
+    // Approach 1: simple loop
     // time complexity: O(n^2)
     // space complexity: O(n)
 
@@ -23,7 +23,7 @@ class Solution {
 
     // --------------------------------------------------------------------
 
-    // method 2: swap
+    // Approach 2: swap
     // time complexity: O(n)
     // space complexity: O(1)
     int l = 0;

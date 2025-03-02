@@ -96,7 +96,7 @@ class Solution {
 
     return head;
 
-    // method 1: loop and skip n
+    // Approach 1: loop and skip n
     // int length = 0;
     // ListNode* current = head;
     // while (current != nullptr) {
@@ -126,7 +126,7 @@ class Solution {
 
     // return head;
 
-    // method 2:
+    // Approach 2:
     // ListNode* dummy = new ListNode(0, head);
     // ListNode* fast = dummy;
     // ListNode* slow = dummy;

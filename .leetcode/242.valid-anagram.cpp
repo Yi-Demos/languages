@@ -8,7 +8,7 @@
 class Solution {
  public:
   bool isAnagram(string s, string t) {
-    // method 1: hashmap char counter
+    // Approach 1: hashmap char counter
     // time complexity: O(n)
     // space complexity: O(n)
     if (s.length() != t.length()) return false;

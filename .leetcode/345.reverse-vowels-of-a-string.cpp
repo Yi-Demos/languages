@@ -10,7 +10,7 @@
 class Solution {
  public:
   string reverseVowels(string s) {
-    // method 1: hashmap char counter
+    // Approach 1: hashmap char counter
     // time complexity: O(n)
     // space complexity: O(1)
     int l = 0;
