@@ -64,7 +64,9 @@
     "algorithm": "cpp",
     "unordered_set": "cpp",
     "set": "cpp",
-    "deque": "cpp"
+    "deque": "cpp",
+    "queue": "cpp",
+    "stack": "cpp"
   },
   "compile-hero.disable-compile-files-on-did-save-code": false
 }
