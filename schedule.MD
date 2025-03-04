@@ -5,12 +5,12 @@
 ## **1. Array（陣列）**
 這些題目涵蓋基礎操作、排序、前綴和、滑動視窗等技巧：
 
-1. **[Two Sum](https://leetcode.com/problems/two-sum/)（#1）**
+1. **[Two Sum](https://leetcode.com/problems/two-sum/)（#1）** Done
    - 類別：Hash Map / Brute Force
    - 難度：Easy
    - 給定一個整數陣列，找出兩個數字，使其和等於目標值。
 
-2. **[Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)（#121）**
+2. **[Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)（#121）** Done
    - 類別：Dynamic Programming / Sliding Window
    - 難度：Easy
    - 找出最大利潤的一天買進、一天賣出策略。
