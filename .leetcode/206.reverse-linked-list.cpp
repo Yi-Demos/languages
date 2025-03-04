@@ -21,29 +21,40 @@ class Solution {
     // Approach 1: iterative
     // time complexity: O(n)
     // space complexity: O(1)
-    // ListNode* prev = nullptr;
-    // ListNode* curr = head;
+    //
+    //            1 -> 2 -> 3 -> 4 -> 5 -> nullptr
+    // nullptr <- 1 <- 2 <- 3 <- 4 <- 5
+    // nullptr  head    nullptr
+    // prev     current next
+    //          prev    current   next
+    //
+    ListNode* current = head;
+    ListNode* prev = nullptr;
+    ListNode* next = nullptr;
 
-    // while (curr) {
-    //   ListNode* next = curr->next;
-    //   curr->next = prev;
-    //   prev = curr;
-    //   curr = next;
-    // }
+    while (current != nullptr) {
+      // link node
+      next = current->next;
+      current->next = prev;
+      // move to next step
+      prev = current;
+      current = next;
+    }
 
-    // return prev;
+    return prev;
 
     // Approach 2: recursive
     // time complexity: O(n)
     // space complexity: O(n)
-    if (!head || !head->next) return head;
-    cout << head->val << "\n";
+    //
+    // if (!head || !head->next) return head;
+    // cout << head->val << "\n";
 
-    ListNode* p = reverseList(head->next);
-    head->next->next = head;
-    head->next = nullptr;
+    // ListNode* p = reverseList(head->next);
+    // head->next->next = head;
+    // head->next = nullptr;
 
-    return p;
+    // return p;
   }
 };
 // @lc code=end
