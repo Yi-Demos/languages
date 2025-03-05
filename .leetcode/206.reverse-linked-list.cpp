@@ -18,7 +18,7 @@
 class Solution {
  public:
   ListNode* reverseList(ListNode* head) {
-    // Approach 1: iterative
+    // Approach 1: iterative (Best)
     // time complexity: O(n)
     // space complexity: O(1)
     //
@@ -28,33 +28,37 @@ class Solution {
     // prev     current next
     //          prev    current   next
     //
-    ListNode* current = head;
-    ListNode* prev = nullptr;
-    ListNode* next = nullptr;
+    // ListNode* current = head;
+    // ListNode* prev = nullptr;
+    // ListNode* next = nullptr;
 
-    while (current != nullptr) {
-      // link node
-      next = current->next;
-      current->next = prev;
-      // move to next step
-      prev = current;
-      current = next;
-    }
+    // while (current != nullptr) {
+    //   // link node
+    //   next = current->next;
+    //   current->next = prev;
+    //   // move to next step
+    //   prev = current;
+    //   current = next;
+    // }
 
-    return prev;
+    // return prev;
 
     // Approach 2: recursive
     // time complexity: O(n)
     // space complexity: O(n)
     //
-    // if (!head || !head->next) return head;
-    // cout << head->val << "\n";
+    //              1    ->   2   ->   3   ->   4   ->   5 -> nullptr
+    // nullptr <-   1    <-   2   <-   3   <-   4   <-   5
+    // head(2) <- nullptr <-  head(2)
+    // head(2) <- head(3) <- nullptr <-  head(3)
 
-    // ListNode* p = reverseList(head->next);
-    // head->next->next = head;
-    // head->next = nullptr;
+    if (!head || !head->next) return head;
 
-    // return p;
+    ListNode* node = reverseList(head->next);
+    head->next->next = head;
+    head->next = nullptr;
+
+    return node;
   }
 };
 // @lc code=end
