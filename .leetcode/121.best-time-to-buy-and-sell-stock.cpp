@@ -8,7 +8,7 @@
 class Solution {
  public:
   int maxProfit(vector<int>& prices) {
-    // Approach 1: simple loop
+    // Approach 1: iterative
     // time complexity: O(n^2)
     // space complexity: O(1)
     // int max = 0;
