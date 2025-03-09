@@ -8,9 +8,12 @@
 class Solution {
  public:
   bool isAnagram(string s, string t) {
-    // Approach 1: hashmap char counter
-    // time complexity: O(n)
-    // space complexity: O(n)
+    /*
+      Approach 1: Hashmap char counter
+      time complexity: O(n)
+      space complexity: O(n)
+    */
+
     if (s.length() != t.length()) return false;
 
     unordered_map<char, int> sCounter;

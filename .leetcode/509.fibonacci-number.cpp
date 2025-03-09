@@ -8,9 +8,12 @@
 class Solution {
  public:
   int fib(int n) {
-    // Approach 1: Dynamic Programming
-    // time complexity: O(n)
-    // space complexity: O(1)
+    /*
+      Approach 1: Dynamic Programming
+      time complexity: O(n)
+      space complexity: O(1)
+    */
+
     if (n == 0) return 0;
     if (n == 1) return 1;
 

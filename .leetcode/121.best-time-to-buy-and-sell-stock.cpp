@@ -8,9 +8,12 @@
 class Solution {
  public:
   int maxProfit(vector<int>& prices) {
-    // Approach 1: iterative
-    // time complexity: O(n^2)
-    // space complexity: O(1)
+    /*
+      Approach 1: Iterative
+      time complexity: O(n^2)
+      space complexity: O(1)
+    */
+
     // int max = 0;
 
     // for (int i = 0; i < prices.size(); i++) {
@@ -26,9 +29,12 @@ class Solution {
 
     // return max;
 
-    // Approach 2: greedy
-    // time complexity: O(n)
-    // space complexity: O(1)
+    /*
+      Approach 2: greedy
+      time complexity: O(n)
+      space complexity: O(1)
+    */
+
     // int maxProfit = 0;
 
     // for (int i = 1; i < prices.size(); i++) {
@@ -37,9 +43,12 @@ class Solution {
 
     // return maxProfit;
 
-    // Approach 3:
-    // time complexity:
-    // space complexity:
+    /*
+      Approach 3:
+      time complexity:
+      space complexity:
+    */
+
 
     int minPrice = INT_MAX;
     int maxProfit = 0;

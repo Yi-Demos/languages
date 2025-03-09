@@ -23,13 +23,15 @@ class Solution {
     return true;
   }
   bool validPalindrome(string s) {
+    /*
+      Approach 1: Recursion
+      time complexity: O(n)
+      space complexity: O(1)
+    */
+
     int l = 0;
     int r = s.size() - 1;
 
-    // Approach 1: Recursion
-    // time complexity: O(n)
-    // space complexity: O(1)
-    // int max = 0;
     return isPalindrome(s, 0, s.length() - 1, false);
   }
 };

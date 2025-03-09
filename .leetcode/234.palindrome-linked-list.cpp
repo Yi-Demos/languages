@@ -32,9 +32,12 @@ class Solution {
     return prev;
   }
   bool isPalindrome(ListNode *head) {
-    // Approach 1: iterative (Best)
-    // time complexity: O(n)
-    // space complexity: O(1)
+    /*
+      Approach 1: Iterative
+      time complexity: O(n)
+      space complexity: O(1)
+    */
+
     // ListNode *reverseList = reverse(head);
     // bool result = true;
 
@@ -50,9 +53,12 @@ class Solution {
 
     // return result;
 
-    // Approach 2: iterative (Best)
-    // time complexity: O(n)
-    // space complexity: O(1)
+    /*
+      Approach 2: Fast & Slow Pointer
+      time complexity: O(n)
+      space complexity: O(1)
+    */
+
     bool result = true;
     ListNode *fast = head;
     ListNode *slow = head;

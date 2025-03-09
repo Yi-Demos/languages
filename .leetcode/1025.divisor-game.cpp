@@ -8,9 +8,12 @@
 class Solution {
  public:
   bool divisorGame(int n) {
-    // Approach 1: Dynamic Programming
-    // time complexity: O(n^2)
-    // space complexity: O(n)
+    /*
+      Approach 1: Dynamic Programming
+      time complexity: O(n^2)
+      space complexity: O(n)
+    */
+
     vector<bool> dp(n + 1, false);
 
     for (int i = 2; i <= n; i++) {
@@ -24,9 +27,12 @@ class Solution {
 
     return dp[n];
 
-    // Approach 2: Math
-    // time complexity: O(1)
-    // space complexity: O(1)
+    /*
+      Approach 2: Math
+      time complexity: O(1)
+      space complexity: O(1)
+    */
+
     // return n % 2 == 0;
   }
 };

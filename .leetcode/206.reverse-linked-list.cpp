@@ -18,10 +18,12 @@
 class Solution {
  public:
   ListNode* reverseList(ListNode* head) {
-    // Approach 1: iterative (Best)
-    // time complexity: O(n)
-    // space complexity: O(1)
-    //
+    /*
+      Approach 1: Iterative (Best)
+      time complexity: O(n)
+      space complexity: O(1)
+    */
+
     //            1 -> 2 -> 3 -> 4 -> 5 -> nullptr
     // nullptr <- 1 <- 2 <- 3 <- 4 <- 5
     // nullptr  head    nullptr
@@ -43,10 +45,12 @@ class Solution {
 
     // return prev;
 
-    // Approach 2: recursive
-    // time complexity: O(n)
-    // space complexity: O(n)
-    //
+    /*
+      Approach 2: recursive
+      time complexity: O(n)
+      space complexity: O(n)
+    */
+
     //              1    ->   2   ->   3   ->   4   ->   5 -> nullptr
     // nullptr <-   1    <-   2   <-   3   <-   4   <-   5
     // head(2) <- nullptr <-  head(2)

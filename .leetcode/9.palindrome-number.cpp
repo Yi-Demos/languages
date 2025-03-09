@@ -8,9 +8,12 @@
 class Solution {
  public:
   bool isPalindrome(int x) {
-    // Approach 1: iterative
-    // time complexity: O(n)
-    // space complexity: O(n)
+    /*
+      Approach 1: Iterative
+      time complexity: O(n)
+      space complexity: O(n)
+    */
+
     string s = to_string(x);
     string reversedString = s;
 

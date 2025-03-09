@@ -8,9 +8,12 @@
 class Solution {
  public:
   bool isPalindrome(string s) {
-    // Approach 1: Two Pointers
-    // time complexity: O(n)
-    // space complexity: O(1)
+    /*
+      Approach 1: Two Pointers
+      time complexity: O(n)
+      space complexity: O(1)
+    */
+
     int left = 0;
     int right = s.size() - 1;
 

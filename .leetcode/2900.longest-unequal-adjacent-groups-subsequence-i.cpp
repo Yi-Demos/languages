@@ -9,9 +9,12 @@ class Solution {
  public:
   vector<string> getLongestSubsequence(vector<string>& words,
                                        vector<int>& groups) {
-    // Approach 1: iterative
-    // time complexity: O(n)
-    // space complexity: O(n)
+    /*
+      Approach 1: Iterative
+      time complexity: O(n)
+      space complexity: O(n)
+    */
+
     vector<string> result;
     int prev = groups[0];
 

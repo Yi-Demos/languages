@@ -8,9 +8,11 @@
 class Solution {
  public:
   void reverseString(vector<char>& s) {
-    // Approach 1: iterative
-    // time complexity: O(n^2)
-    // space complexity: O(n)
+    /*
+      Approach 1: Iterative
+      time complexity: O(n^2)
+      space complexity: O(n)
+    */
 
     // tmp.insert(tmp.begin()) 是往前新增都會把原先的重排，因此 time complexity
     // 為 n^2 而非 n vector<char> tmp;
@@ -23,9 +25,12 @@ class Solution {
 
     // --------------------------------------------------------------------
 
-    // Approach 2: swap
-    // time complexity: O(n)
-    // space complexity: O(1)
+    /*
+      Approach 2: Two Pointer
+      time complexity: O(n)
+      space complexity: O(1)
+    */
+
     int l = 0;
     int r = s.size() - 1;
 

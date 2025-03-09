@@ -18,9 +18,12 @@
 class Solution {
  public:
   ListNode* middleNode(ListNode* head) {
-    // Approach 1: Two Pointers
-    // time complexity: O(n)
-    // space complexity: O(1)
+    /*
+      Approach 1: Two Pointers
+      time complexity: O(n)
+      space complexity: O(1)
+    */
+
     ListNode* start = head;
     ListNode* end = head;
 

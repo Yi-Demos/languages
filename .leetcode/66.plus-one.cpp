@@ -8,9 +8,12 @@
 class Solution {
  public:
   vector<int> plusOne(vector<int>& digits) {
-    // Approach 1: iterative
-    // time complexity: O(n)
-    // space complexity: O(1)
+    /*
+      Approach 1: Iterative
+      time complexity: O(n)
+      space complexity: O(1)
+    */
+
     digits[digits.size() - 1] += 1;
 
     int carry = 0;

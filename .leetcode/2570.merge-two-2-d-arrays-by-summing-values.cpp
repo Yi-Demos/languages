@@ -9,9 +9,12 @@ class Solution {
  public:
   vector<vector<int>> mergeArrays(vector<vector<int>>& nums1,
                                   vector<vector<int>>& nums2) {
-    // Approach 1: Two Pointers (best)
-    // time complexity: O(n + m)
-    // space complexity: O(n + m)
+    /*
+      Approach 1: Two Pointers (best)
+      time complexity: O(n + m)
+      space complexity: O(n + m)
+    */
+
     vector<vector<int>> result;
     int i = 0, j = 0;
 
@@ -38,9 +41,12 @@ class Solution {
     }
     return result;
 
-    // Approach 2: HashMap
-    // time complexity: O(n + m)
-    // space complexity: O(n + m)
+    /*
+      Approach 2: HashMap
+      time complexity: O(n + m)
+      space complexity: O(n + m)
+    */
+
     // map<int, int> keyToSum;
 
     // // Copying the array nums1 to the map.

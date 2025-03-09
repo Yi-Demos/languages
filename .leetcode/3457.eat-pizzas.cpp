@@ -6,10 +6,7 @@
 
 // @lc code=start
 class Solution {
-public:
-    long long maxWeight(vector<int>& pizzas) {
-        
-    }
+ public:
+  long long maxWeight(vector<int>& pizzas) {}
 };
 // @lc code=end
-

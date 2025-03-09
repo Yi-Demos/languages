@@ -23,9 +23,12 @@ class Solution {
   }
 
   int largestRectangleArea(vector<int>& heights) {
-    // Approach 1: iterative (Time Limit Exceeded)
-    // time complexity: O(n^2)
-    // space complexity: O(n)
+    /*
+      Approach 1: Iterative (Time Limit Exceeded)
+      time complexity: O(n^2)
+      space complexity: O(n)
+    */
+
     // int largest = 0;
 
     // for (int i = 0; i < heights.size(); i++) {
@@ -40,10 +43,13 @@ class Solution {
 
     // return largest;
 
-    // Approach 2: Monotonic Stack
-    // time complexity: O(n)
-    // space complexity: O(n)
-    // https://www.youtube.com/watch?v=XwUb7x6YDeA&ab_channel=LeetCode%E5%8A%9B%E6%89%A3
+    /*
+      Approach 2: Monotonic Stack
+      time complexity: O(n)
+      space complexity: O(n)
+      https://www.youtube.com/watch?v=XwUb7x6YDeA&ab_channel=LeetCode%E5%8A%9B%E6%89%A3
+    */
+
     stack<int> indices;
     int max_area = 0;
     int n = heights.size();

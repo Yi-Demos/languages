@@ -27,19 +27,61 @@ class Solution {
     return result;
   }
   int pairSum(ListNode* head) {
-    // Approach 1: Two Pointers
-    // time complexity: O(n)
-    // space complexity: O(n)
-    vector<int> listVec = linkedListToVector(head);
+    /*
+      Approach 1: Two Pointers
+      time complexity: O(n)
+      space complexity: O(n)
+    */
+
+    // vector<int> listVec = linkedListToVector(head);
+    // int result = 0;
+    // int l = 0;
+    // int r = listVec.size() - 1;
+
+    // while (l < r) {
+    //   result = max(result, listVec[l] + listVec[r]);
+
+    //   l++;
+    //   r--;
+    // }
+
+    // return result;
+
+    /*
+      Approach 2: Fast & Slow Pointer
+      time complexity: O(n)
+      space complexity: O(1)
+    */
+
     int result = 0;
-    int l = 0;
-    int r = listVec.size() - 1;
+    ListNode* fast = head;
+    ListNode* slow = head;
 
-    while (l < r) {
-      result = max(result, listVec[l] + listVec[r]);
+    while (fast && fast->next) {
+      slow = slow->next;
+      fast = fast->next->next;
+    }
 
-      l++;
-      r--;
+    // reverse half then compare
+    ListNode* prev = nullptr;
+    ListNode* current = slow;
+    ListNode* next = nullptr;
+
+    while (current) {
+      next = current->next;
+      current->next = prev;
+      prev = current;
+      current = next;
+    }
+
+    ListNode* firstHalf = head;
+    ListNode* secondHalf = prev;
+
+    while (secondHalf) {
+      result = max(result, firstHalf->val + secondHalf->val);
+
+      firstHalf = firstHalf->next;
+      secondHalf = secondHalf->next;
     }
 
     return result;

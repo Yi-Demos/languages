@@ -10,9 +10,12 @@
 class Solution {
  public:
   string reverseVowels(string s) {
-    // Approach 1: hashmap char counter
-    // time complexity: O(n)
-    // space complexity: O(1)
+    /*
+      Approach 1: Hashmap char counter
+      time complexity: O(n)
+      space complexity: O(1)
+    */
+
     int l = 0;
     int r = s.size() - 1;
     unordered_set<char> vowels = {'a', 'e', 'i', 'o', 'u',

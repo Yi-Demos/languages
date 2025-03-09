@@ -96,7 +96,12 @@ class Solution {
 
     return head;
 
-    // Approach 1: loop and skip n
+    /*
+      Approach 1: Iterative
+      time complexity: O(n)
+      space complexity: O(n)
+    */
+
     // int length = 0;
     // ListNode* current = head;
     // while (current != nullptr) {
@@ -126,7 +131,12 @@ class Solution {
 
     // return head;
 
-    // Approach 2:
+    /*
+      Approach 2: Fast & Slow Pointer
+      time complexity: O(n)
+      space complexity: O(1)
+    */
+
     // ListNode* dummy = new ListNode(0, head);
     // ListNode* fast = dummy;
     // ListNode* slow = dummy;

@@ -8,9 +8,12 @@
 class Solution {
  public:
   int minCostClimbingStairs(vector<int>& cost) {
-    // Approach 1: Dynamic Programming
-    // time complexity: O(n)
-    // space complexity: O(1)
+    /*
+      Approach 1: Dynamic Programming
+      time complexity: O(n)
+      space complexity: O(1)
+    */
+
     int result = 0;
     int prev1 = cost.at(0);
     int prev2 = cost.at(1);
