@@ -20,20 +20,20 @@ void display(const unordered_set<int> &);
 int main() {
   // vector<int> nums;
   // unordered_set<int> ust(nums.begin(), nums.end());
-  unordered_set<int> ust = {1, 2, 3, 4, 5};
+  unordered_set<int> ust = {1, 2, 3};
 
   // insert ont
-  ust.insert(6);
+  ust.insert(4);
   // insert many
-  ust.insert({7, 8, 9});
+  ust.insert({5, 6});
 
   // check if num has alreay existed in set
   // ust.count(1) same as ust.find(1) !== ust.end()
 
   if (ust.count(1)) {
-    cout << "found";
+    cout << "found" << endl;
   } else {
-    cout << "not found";
+    cout << "not found" << endl;
   }
 
   display(ust);
@@ -48,7 +48,7 @@ int main() {
 void display(const unordered_set<int> &uset) {
   cout << "numbers = ";
 
-  for (const auto &value : uset) {
+  for (const int &value : uset) {
     cout << value << ", ";
   }
 }
