@@ -100,3 +100,224 @@ system::Math::Sqrt() 相當於System.Math.Sqrt()
 | `|`                      | 位元或                        | `int result = a | b;`            |
 | `^`                      | 位元異或                      | `int result = a ^ b;`            |
 |
+
+
+===
+
+
+在 C++ 中，标准模板库（STL）提供了多种容器类型，每种容器都有其特定的用途和用法。以下是一些常见容器的简要介绍及其基本用法示例：
+
+### 1. `std::list`（双向链表）
+
+`std::list` 是一个双向链表容器，允许在常数时间内对任意位置进行插入和删除操作，但不支持随机访问。
+
+```cpp
+#include <list>
+#include <iostream>
+
+int main() {
+    std::list<int> myList = {1, 2, 3, 4, 5};
+
+    // 插入元素
+    myList.push_back(6);
+    myList.push_front(0);
+
+    // 删除元素
+    myList.pop_back();
+    myList.pop_front();
+
+    // 遍历元素
+    for (int n : myList) {
+        std::cout << n << ' ';
+    }
+    return 0;
+}
+```
+
+### 2. `std::deque`（双端队列）
+
+`std::deque` 是一种双端队列，支持在序列的两端进行高效的插入和删除操作，同时支持随机访问。
+
+```cpp
+#include <deque>
+#include <iostream>
+
+int main() {
+    std::deque<int> myDeque = {1, 2, 3, 4, 5};
+
+    // 在两端插入元素
+    myDeque.push_back(6);
+    myDeque.push_front(0);
+
+    // 在两端删除元素
+    myDeque.pop_back();
+    myDeque.pop_front();
+
+    // 访问元素
+    std::cout << myDeque[1] << std::endl;
+
+    // 遍历元素
+    for (int n : myDeque) {
+        std::cout << n << ' ';
+    }
+    return 0;
+}
+```
+
+### 3. `std::map`（映射）
+
+`std::map` 是一种关联容器，存储键值对，键唯一且按顺序排列，通常使用红黑树实现，支持高效的查找、插入和删除操作。
+
+```cpp
+#include <map>
+#include <iostream>
+
+int main() {
+    std::map<std::string, int> myMap;
+
+    // 插入元素
+    myMap["apple"] = 3;
+    myMap["banana"] = 5;
+
+    // 访问元素
+    std::cout << myMap["apple"] << std::endl;
+
+    // 遍历元素
+    for (const auto& pair : myMap) {
+        std::cout << pair.first << ": " << pair.second << std::endl;
+    }
+    return 0;
+}
+```
+
+### 4. `std::multimap`（多重映射）
+
+`std::multimap` 类似于 `std::map`，但允许键重复。
+
+```cpp
+#include <map>
+#include <iostream>
+
+int main() {
+    std::multimap<std::string, int> myMultimap;
+
+    // 插入元素
+    myMultimap.insert({"apple", 3});
+    myMultimap.insert({"apple", 4});
+
+    // 遍历元素
+    for (const auto& pair : myMultimap) {
+        std::cout << pair.first << ": " << pair.second << std::endl;
+    }
+    return 0;
+}
+```
+
+### 5. `std::unordered_map`（无序映射）
+
+`std::unordered_map` 是一种无序关联容器，存储键值对，键唯一但无特定顺序，通常使用哈希表实现，支持平均常数时间的查找、插入和删除操作。
+
+```cpp
+#include <unordered_map>
+#include <iostream>
+
+int main() {
+    std::unordered_map<std::string, int> myUnorderedMap;
+
+    // 插入元素
+    myUnorderedMap["apple"] = 3;
+    myUnorderedMap["banana"] = 5;
+
+    // 访问元素
+    std::cout << myUnorderedMap["apple"] << std::endl;
+
+    // 遍历元素
+    for (const auto& pair : myUnorderedMap) {
+        std::cout << pair.first << ": " << pair.second << std::endl;
+    }
+    return 0;
+}
+```
+
+### 6. `std::unordered_multimap`（无序多重映射）
+
+`std::unordered_multimap` 类似于 `std::unordered_map`，但允许键重复。
+
+```cpp
+#include <unordered_map>
+#include <iostream>
+
+int main() {
+    std::unordered_multimap<std::string, int> myUnorderedMultimap;
+
+    // 插入元素
+    myUnorderedMultimap.insert({"apple", 3});
+    myUnorderedMultimap.insert({"apple", 4});
+
+    // 遍历元素
+    for (const auto& pair : myUnorderedMultimap) {
+        std::cout << pair.first << ": " << pair.second << std::endl;
+    }
+    return 0;
+}
+```
+
+### 7. `std::stack`（栈）
+
+`std::stack` 是一种适配器容器，遵循后进先出（LIFO）原则，只允许在一端进行插入和删除操作。
+
+```cpp
+#include <stack>
+#include <iostream>
+
+int main() {
+    std::stack<int> myStack;
+
+    // 插入元素
+    myStack.push(1);
+    myStack.push(2);
+
+    // 访问栈顶元素
+    std::cout << myStack.top() << std::endl;
+
+    // 删除栈顶元素
+    myStack.pop();
+
+    // 访问栈顶元素
+    std::cout << myStack.top() << std::endl;
+
+    return 0;
+}
+```
+
+### 8. `std::queue`（队列）
+
+`std::queue` 是一种适配器容器，遵循先进先出（FIFO）原则，只允许在一端插入，在另一端删除。
+
+```cpp
+#include <queue>
+#include <iostream>
+
+int main() {
+    std::queue<int> myQueue;
+
+    // 插入元素
+    myQueue.push(1);
+    myQueue.push(2);
+
+    // 访问队首元素
+    std::cout << myQueue.front() << std::endl;
+
+    // 删除队首元素
+    myQueue.pop();
+
+    // 访问队首元素
+    std::cout << myQueue.front() << std::endl;
+
+    return 0;
+}
+```
+
+### 9. `std::priority_queue`（优先队列）
+
+`std::priority_queue` 是一种适配器容器，类似于堆，元素按优先级排序，每
