@@ -9,3 +9,8 @@ DP, DFS, BFS, Sliding Window. Two Pointers
 53 最大子陣列和（Maximum Subarray）
 88 合併兩個有序陣列（Merge Sorted Array）
 118 楊輝三角（Pascal's Triangle）
+
+
+<!-- Kadane's Algorithm -->
+[53] Maximum Subarray
+[152] Maximum Product Subarray

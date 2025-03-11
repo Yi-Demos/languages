@@ -9,7 +9,7 @@ class Solution {
  public:
   int maxSubArray(vector<int>& nums) {
     /*
-      Approach 1: Two Pointers (slow and fast)
+      Approach 1: Dynamic Programming (Kadane's Algorithm)
       time complexity: O(n)
       space complexity: O(1)
     */
