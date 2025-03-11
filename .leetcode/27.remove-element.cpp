@@ -9,7 +9,7 @@ class Solution {
  public:
   int removeElement(vector<int>& nums, int val) {
     /*
-      Approach 1: Two Pointers (slow and fast)
+      Approach 1: Iterative
       time complexity: O(n)
       space complexity: O(1)
     */
