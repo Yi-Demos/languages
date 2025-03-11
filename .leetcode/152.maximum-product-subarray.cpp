@@ -12,21 +12,10 @@ class Solution {
       Approach 1: Dynamic Programming (Kadane's Algorithm)
       time complexity: O(n)
       space complexity: O(1)
+
+      因為乘法可能會有負負得正的情況，所以需要紀錄最小值
+      [53] Maximum Subarray 的解法是只紀錄最大值，因為加法不會有負負得正的情況
     */
-
-    // int currentProduct = nums[0];
-    // int maxSum = nums[0];
-    // int minSum = nums[0];
-
-    // for (int i = 1; i < nums.size(); ++i) {
-    //   if (nums[i] < 0) swap(maxSum, minSum);
-
-    //   currentProduct = max(nums[i], currentProduct * nums[i]);
-    //   maxSum = max(maxSum, currentProduct);
-    //   minSum = min(minSum, currentProduct);
-    // }
-
-    // return maxSum;
 
     int maxProduct = nums[0];
     int minProduct = nums[0];
