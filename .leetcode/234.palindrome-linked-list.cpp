@@ -54,7 +54,7 @@ class Solution {
     // return result;
 
     /*
-      Approach 2: Fast & Slow Pointer
+      Approach 2: Two Pointers (slow and fast)
       time complexity: O(n)
       space complexity: O(1)
     */

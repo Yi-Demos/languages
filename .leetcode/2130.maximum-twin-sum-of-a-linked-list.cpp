@@ -28,7 +28,7 @@ class Solution {
   }
   int pairSum(ListNode* head) {
     /*
-      Approach 1: Two Pointers
+      Approach 1: Two Pointers (left and right)
       time complexity: O(n)
       space complexity: O(n)
     */
@@ -48,7 +48,7 @@ class Solution {
     // return result;
 
     /*
-      Approach 2: Fast & Slow Pointer
+      Approach 2: Two Pointers (slow and fast)
       time complexity: O(n)
       space complexity: O(1)
     */
