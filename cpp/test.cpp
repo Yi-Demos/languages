@@ -1,10 +1,8 @@
-/*
- * @lc app=leetcode id=8 lang=cpp
- *
- * [8] String to Integer (atoi)
- */
+#include <iostream>
+#include <vector>
 
-// @lc code=start
+using namespace std;
+
 class Solution {
  public:
   int myAtoi(string s) {
@@ -26,7 +24,10 @@ class Solution {
 
     // Check sign
     while (s[0] == '-' || s[0] == '+') {
-      if (signChecked) return 0;
+      if (signChecked) {
+        cout << "signChecked " << signChecked << endl;
+        return 0;
+      }
       if (s[0] == '-') isNagative = true;
 
       signChecked = true;
@@ -39,13 +40,11 @@ class Solution {
     // Check digits
     // isdigit
     // s[digit] >= '0' && s[digit] <= '9'
-    while (isdigit(s[digit]) && s[digit] != '0') {
+    while (isdigit(s[digit])) {
       digit++;
     }
 
     cout << "digit " << digit << endl;
-
-    if (digit > 11) return isNagative ? INT_MIN : INT_MAX;
 
     int i = digit;
     long long num = 0;
@@ -55,15 +54,27 @@ class Solution {
 
       num = num + digitNum * pow(10, digit - i);
       i--;
-
-      if (num > INT_MAX) return INT_MAX;
     }
 
     cout << "num " << num << endl;
 
     if (isNagative) num *= -1;
 
+    if (num > INT_MAX) return INT_MAX;
+    if (num < INT_MIN) return INT_MIN;
+
     return num;
   }
 };
-// @lc code=end
+
+int main() {
+  Solution sol;
+
+  // cout << sol.myAtoi("   -42") << endl;
+  // cout << sol.myAtoi("4193 with words") << endl;
+  // cout << sol.myAtoi("words and 987") << endl;
+  // cout << sol.myAtoi("-91283472332") << endl;
+  cout << sol.myAtoi("+1") << endl;
+
+  return 0;
+}
