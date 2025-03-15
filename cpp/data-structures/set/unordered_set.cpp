@@ -45,6 +45,31 @@ int main() {
   return 0;
 }
 
+void find() {
+  unordered_set<int> example = {1, 2, 3, 4};
+
+  // contains() (C++20 support)
+  if (example.contains(2)) {
+    cout << "Found\n";
+  } else {
+    cout << "Not found\n";
+  }
+
+  // find() (C++11 support)
+  if (example.find(2) != example.end()) {
+    cout << "Found\n";
+  } else {
+    cout << "Not found\n";
+  }
+
+  // count() (C++11 support)
+  if (example.count(2) > 0) {
+    cout << "Found\n";
+  } else {
+    cout << "Not found\n";
+  }
+}
+
 void display(const unordered_set<int> &uset) {
   cout << "numbers = ";
 
