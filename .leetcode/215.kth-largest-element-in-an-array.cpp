@@ -7,13 +7,6 @@
 // @lc code=start
 class Solution {
  public:
-  void print_queue(queue<int> q) {
-    while (!q.empty()) {
-      cout << q.front() << " ";
-      q.pop();
-    }
-    cout << endl;
-  }
   int findKthLargest(vector<int>& nums, int k) {
     // Solution 1: Using priority queue
     // Time complexity: O(nlogk)
