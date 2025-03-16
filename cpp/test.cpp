@@ -1,30 +1,22 @@
 #include <iostream>
 #include <vector>
+#include <map>
 
 using namespace std;
 
-class Solution {
- public:
-  vector<int> topKFrequent(vector<int>& nums, int k) {
-    unordered_map<int, int> umap;
-
-    for (int num : nums) {
-      umap[num]++;
-    }
-
-    for (auto it = umap.begin(); it != umap.end(); it++) {
-      cout << "it->first " << it->first << " it->second " << it->second << endl;
-    }
-
-    return nums;
-  }
-};
-
 int main() {
-  Solution sol;
-  vector<int> nums = {1, 1, 1, 2, 2, 3};
+  map<char, int> myMap = {{'a', 3}, {'d', 3}, {'b', 1}, {'c', 2}};
 
-  sol.topKFrequent(nums, 2);
+  // 用 multimap 來依 value 排序
+  multimap<int, char> sortedMap;
+  for (const auto &p : myMap) {
+    sortedMap.insert({p.second, p.first});  // 交換 key 和 value
+  }
+
+  // 輸出排序結果
+  for (const auto &p : sortedMap) {
+    cout << p.first << ": " << p.second << endl;
+  }
 
   return 0;
 }
