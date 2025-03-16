@@ -5,76 +5,26 @@ using namespace std;
 
 class Solution {
  public:
-  int myAtoi(string s) {
-    /*
-      Approach 1: Iterative
-      time complexity: O(n)
-      space complexity: O(n)
-    */
+  vector<int> topKFrequent(vector<int>& nums, int k) {
+    unordered_map<int, int> umap;
 
-    if (isdigit(s[0]) == false && s[0] != ' ' && s[0] != '-' && s[0] != '+') return 0;
-
-    bool isNagative = false;
-    int signChecked = false;
-
-    // Skip whitespace
-    while (s[0] == ' ') {
-      s.erase(0, 1);
+    for (int num : nums) {
+      umap[num]++;
     }
 
-    // Check sign
-    while (s[0] == '-' || s[0] == '+') {
-      if (signChecked) {
-        cout << "signChecked " << signChecked << endl;
-        return 0;
-      }
-      if (s[0] == '-') isNagative = true;
-
-      signChecked = true;
-
-      s.erase(0, 1);
+    for (auto it = umap.begin(); it != umap.end(); it++) {
+      cout << "it->first " << it->first << " it->second " << it->second << endl;
     }
 
-    int digit = 0;
-
-    // Check digits
-    // isdigit
-    // s[digit] >= '0' && s[digit] <= '9'
-    while (isdigit(s[digit])) {
-      digit++;
-    }
-
-    cout << "digit " << digit << endl;
-
-    int i = digit;
-    long long num = 0;
-
-    while (i > 0) {
-      int digitNum = s[i - 1] - '0';
-
-      num = num + digitNum * pow(10, digit - i);
-      i--;
-    }
-
-    cout << "num " << num << endl;
-
-    if (isNagative) num *= -1;
-
-    if (num > INT_MAX) return INT_MAX;
-    if (num < INT_MIN) return INT_MIN;
-
-    return num;
+    return nums;
   }
 };
 
 int main() {
   Solution sol;
+  vector<int> nums = {1, 1, 1, 2, 2, 3};
 
-  // cout << sol.myAtoi("   -42") << endl;
-  // cout << sol.myAtoi("4193 with words") << endl;
-  // cout << sol.myAtoi("words and 987") << endl;
-  // cout << sol.myAtoi("-91283472332") << endl;
-  cout << sol.myAtoi("+1") << endl;
+  sol.topKFrequent(nums, 2);
 
   return 0;
 }

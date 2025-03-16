@@ -12,29 +12,29 @@ class Solution {
     // Time complexity: O(nlogk)
     // Space complexity: O(k)
 
-    priority_queue<int, vector<int>, greater<int>> minHeap;
+    // priority_queue<int, vector<int>, greater<int>> minHeap;
 
-    for (int num : nums) {
-      minHeap.push(num);
+    // for (int num : nums) {
+    //   minHeap.push(num);
 
-      if (minHeap.size() > k) minHeap.pop();
+    //   if (minHeap.size() > k) minHeap.pop();
 
-      for (int num : minHeap) {
-        cout << num << " ";
-      }
+    //   for (int num : minHeap) {
+    //     cout << num << " ";
+    //   }
 
-      cout << minHeap.top() << endl;
-    }
-
-    return minHeap.top();
-
-    // priority_queue<int, vector<int>> maxHeap(nums.begin(), nums.end());
-
-    // for (int i = 0; i < k - 1; i++) {
-    //   maxHeap.pop();
+    //   cout << minHeap.top() << endl;
     // }
 
-    // return maxHeap.top();
+    // return minHeap.top();
+
+    priority_queue<int, vector<int>> maxHeap(nums.begin(), nums.end());
+
+    for (int i = 0; i < k - 1; i++) {
+      maxHeap.pop();
+    }
+
+    return maxHeap.top();
   }
 };
 // @lc code=end

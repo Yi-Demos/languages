@@ -17,5 +17,22 @@ int main() {
     cout << "Key " << key << " not found." << endl;
   }
 
+  // map find key by value
+  // https://stackoverflow.com/questions/4263640/find-mapped-value-of-map
+  for (auto it = umap.begin(); it != umap.end(); ++it) {
+    if (it->second == "two") {
+      cout << "it->first " << it->first << endl;
+      return it->first;
+    }
+  }
+
+  // c++17
+  for (const auto& [key, value] : umap) {
+    if (value == "two") {
+      cout << "[key, value] " << key << endl;
+      // return key;
+    }
+  }
+
   return 0;
 }
