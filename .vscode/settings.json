@@ -66,7 +66,10 @@
     "set": "cpp",
     "deque": "cpp",
     "queue": "cpp",
-    "stack": "cpp"
+    "stack": "cpp",
+    "execution": "cpp",
+    "memory": "cpp",
+    "print": "cpp"
   },
   "compile-hero.disable-compile-files-on-did-save-code": false
 }
