@@ -16,6 +16,10 @@ int main() {
   set<int> ascendingSet = {5, 3, 8, 1, 4}; // cout: 1 3 4 5 8
   set<int, DescendingOrder> descendingSet = {5, 3, 8, 1, 4}; // cout: 8 5 4 3 1
 
+
+  // 獲得 set 中第 k 大的元素
+  *next(ascendingSet.rbegin(), k - 1)
+
   // 插入元素
   mySet.insert(3);
   mySet.insert(1);
