@@ -1,4 +1,16 @@
-DP, DFS, BFS, Sliding Window. Two Pointers
+1.1 Array
+1.2 Linked List
+1.3 Interrupt Handling
+
+2.1. HashSet / HashTable
+2.2. Tree
+2.3. Heap
+
+3.1. Binary Search
+3.2. Breadth-First Search
+3.3. Best-First Search
+3.4. Depth-First Search
+3.5. Backtracking
 
 
 陣列（Array）相關題目：
