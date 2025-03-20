@@ -30,6 +30,9 @@ class Solution {
       Space complexity: O(m*n)
     */
 
+    // NOTE:
+    // vector<int> v(3, 1) == vector<int> v = {1,1 1}
+
     vector<vector<int>> dp(m, vector<int>(n, 1));
 
     for (int i = 1; i < m; ++i) {
