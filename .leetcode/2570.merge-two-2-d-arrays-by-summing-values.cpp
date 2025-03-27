@@ -10,7 +10,7 @@ class Solution {
   vector<vector<int>> mergeArrays(vector<vector<int>>& nums1,
                                   vector<vector<int>>& nums2) {
     /*
-      Approach 1: Two Pointers (best)
+      Approach 1: Two Pointers (Optimized)
       time complexity: O(n + m)
       space complexity: O(n + m)
     */

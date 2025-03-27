@@ -19,7 +19,7 @@ class Solution {
  public:
   ListNode* reverseList(ListNode* head) {
     /*
-      Approach 1: Iterative (Best)
+      Approach 1: Iterative (Optimized)
       time complexity: O(n)
       space complexity: O(1)
     */
