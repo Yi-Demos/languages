@@ -26,3 +26,54 @@
 <!-- Kadane's Algorithm -->
 [53] Maximum Subarray
 [152] Maximum Product Subarray
+
+
+<!-- DP -->
+
+983 Minimum Cost For Tickets
+322 Coin Change
+139 Word Break
+198 House Robber
+1143 Longest Common Subsequence
+1235 Maximum Profit in Job Scheduling
+1278 Palindrome Partitioning III
+
+🟢 Level 1：DP 基本觀念 - 一維遞推
+這階段重點在熟悉 dp[i] = ... 的遞推方式
+
+70. Climbing Stairs ⭐️Easy
+最基礎的 DP 題，像 Fibonacci
+198. House Robber ⭐️Easy
+加入「不能偷相鄰」，學會跳著做遞推
+746. Min Cost Climbing Stairs ⭐️Easy
+有點像爬樓梯但加上花費，慢慢靠近 983 的型態
+213. House Robber II ⭐️Medium
+多了環狀限制，要拆成兩段處理
+
+🟡 Level 2：經典轉移 - 背包與切割
+這階段練習分段處理、條件轉移，為時間段作準備
+
+322. Coin Change ⭐️Medium
+非常像 983 題，只是換成金額轉移
+139. Word Break ⭐️Medium
+切割字串，考慮不同「段」的狀態轉移
+518. Coin Change II ⭐️Medium
+組合型 DP，要注意順序跟狀態意義
+
+🔵 Level 3：時間軸 + 區段決策
+
+進入像 983 題這樣的「覆蓋問題」、「最小/最大成本決策」
+983. Minimum Cost For Tickets ⭐️Medium
+✅ 主題關鍵題，搞懂它就是 DP 升級
+1235. Maximum Profit in Job Scheduling ⭐️Hard
+跟 983 很像，但是最大化報酬 + 要用 binary search 搭配 DP
+1344. Jump Game V ⭐️Hard
+從每格往前跳後跳，考慮區間的最大收益
+
+🔴 Level 4：進階強化題
+難度提高，適合你完全掌握 DP 概念後刷：
+
+2218. Maximum Value of K Coins From Piles ⭐️Hard
+1043. Partition Array for Maximum Sum ⭐️Medium
+837. New 21 Game ⭐️Medium-Hard
+174. Dungeon Game ⭐️Hard
