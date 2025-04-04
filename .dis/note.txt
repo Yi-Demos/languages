@@ -1,0 +1,37 @@
+https://leetcode.com/discuss/post/6613721/google-l5-interview-experience-by-anonym-jkbx/
+
+
+Phone Screen:
+You are given heights of blocks in form of 2D matrix, lets say a drop of water falls on top of each block, calculate the final positions for each drop, drop will move to adjacent block if adjacent block's height is smaller than current block's height.
+In case of multiple smaller adjacent blocks, drop will move to block with smallest height.
+
+Example:
+[0, 1, 4, 2]
+[3, 7, 0, 1]
+
+Result: [(0, 0), (0, 0), (1, 2), (1, 2), (0, 0), (0, 0), (1, 2), (1, 2)]
+
+Follow up: Now infinite drops can fall to each blocks, modify existing code to return all posible positions.
+Now drop can go to each block which is smaller than current block.
+
+Example:
+[0, 1, 4, 2]
+[3, 7, 0, 1]
+
+Result: [[(0, 0)], [(0, 0)], [(0, 0), (1, 2)], ...]
+
+Onsite1:
+https://leetcode.com/problems/subtree-of-another-tree/description/
+Interviewer wanted solution in O(N) using tree hashing method
+
+https://leetcode.com/problems/serialize-and-deserialize-binary-tree/description/
+It was a modified version of this problem, where each node's value would be a string instead of an integer as mentioned in original question and string can have any character possible (including special characters)
+
+Onsite2:
+Given an array of playing cards from set of 52 card deck, provide if it is a valid set or not.
+Conditions:
+
+Set has to have >= 3 cards and each card should belong to different suites and should have same number. eg: 4H, 4S, 4C, 4D
+Set has to have >= 3 cards and each card should make a consecutive sequence. eg: 3H, 4D, 5S
+Follow up: Given an array of playing cards from set of 52 card deck, return all possible valid sets that can be made.
+
