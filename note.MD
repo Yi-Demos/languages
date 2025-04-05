@@ -77,3 +77,16 @@
 1043. Partition Array for Maximum Sum ⭐️Medium
 837. New 21 Game ⭐️Medium-Hard
 174. Dungeon Game ⭐️Hard
+
+
+
+------
+遞迴 + 分治 + 組合型 Leetcode 題目練習清單
+
+✅ 241. Different Ways to Add Parentheses（你已經完成 🎉）
+🔢 93. Restore IP Addresses（熟悉遞迴切割字串）
+🔁 39. Combination Sum（進一步練習組合所有可能）
+🌲 95. Unique Binary Search Trees II（開始學建構「所有結構」）
+✍️ 282. Expression Add Operators（進階版數學表達式處理）
+♟️ 51. N-Queens（經典所有合法擺法問題）
+♟️ 52. N-Queens II（優化型題目，練邏輯與效率）
