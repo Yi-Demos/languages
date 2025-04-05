@@ -36,6 +36,12 @@ class Solution {
     path.pop_back();
   }
   vector<vector<int>> pathSum(TreeNode* root, int targetSum) {
+    /*
+      Approach 1: DFS
+      time complexity: O(n)
+      space complexity: O(n)
+    */
+
     vector<int> path;
 
     dfs(root, targetSum, path);
