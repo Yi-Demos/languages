@@ -12,9 +12,7 @@ class Solution {
     reverse(b.begin(), b.end());
 
     if (a.size() > b.size()) {
-
     } else {
-
     }
 
     return "";

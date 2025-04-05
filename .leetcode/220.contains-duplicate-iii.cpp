@@ -22,7 +22,8 @@ class Solution {
 
     //   // auto it = window.lower_bound((long)nums[i] - valueDiff);
 
-    //   if (it != window.end() && *it <= (long)nums[i] + valueDiff) return true;
+    //   if (it != window.end() && *it <= (long)nums[i] + valueDiff) return
+    //   true;
 
     //   window.insert(nums[i]);
     // }
@@ -32,7 +33,8 @@ class Solution {
     for (int i = 0; i < nums.size(); i++) {
       if (window.find(nums[i]) != window.end()) {
         for (int s : window) {
-          cout << s << " " << nums[i] << " " << abs((long)s - (long)nums[i]) << endl;
+          cout << s << " " << nums[i] << " " << abs((long)s - (long)nums[i])
+               << endl;
           if (abs((long)s - (long)nums[i]) <= valueDiff) return true;
         }
       }

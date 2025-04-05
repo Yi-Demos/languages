@@ -49,7 +49,6 @@ class Solution {
       space complexity:
     */
 
-
     int minPrice = INT_MAX;
     int maxProfit = 0;
 

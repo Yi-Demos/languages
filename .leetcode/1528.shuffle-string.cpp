@@ -6,10 +6,7 @@
 
 // @lc code=start
 class Solution {
-public:
-    string restoreString(string s, vector<int>& indices) {
-        
-    }
+ public:
+  string restoreString(string s, vector<int>& indices) {}
 };
 // @lc code=end
-

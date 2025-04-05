@@ -22,11 +22,14 @@ class Solution {
     return s == reversedString;
 
     // TODO: WTF?
-    // Approach 2: 不將整數轉換為字串，而是反轉整數的一半，然後與另一半比較。​
+    // Approach 2:
+    // 不將整數轉換為字串，而是反轉整數的一半，然後與另一半比較。​
 
     // 實現步驟：
-    // 若整數為負數或（不為 0 且以 0 結尾），則不是回文數。​
-    // 初始化變數 revertedNumber 為 0。​ 當原始數字大於 revertedNumber
+    // 若整數為負數或（不為 0 且以 0
+    // 結尾），則不是回文數。​
+    // 初始化變數 revertedNumber 為 0。​ 當原始數字大於
+    // revertedNumber
     // 時：​ 將 revertedNumber 更新為 revertedNumber * 10 + x % 10。​
     // 將原始數字 x 更新為 x / 10。​
     // 當迴圈結束時，若原始數字等於 revertedNumber 或原始數字等於 revertedNumber
@@ -45,10 +48,12 @@ class Solution {
     //   x /= 10;
     // }
 
-    // // 當數字長度為奇數時，我們可以通過 revertedNumber/10 去除處於中位的數字。
+    // // 當數字長度為奇數時，我們可以通過 revertedNumber/10
+    // 去除處於中位的數字。
     // // 例如，當輸入為 12321 時，在 while 迴圈的末尾我們可以得到 x =
     // // 12，revertedNumber = 123，
-    // // 由於處於中位的數字不影響回文（它總是與自己相等），所以我們可以簡單地將其去除。
+    // //
+    // 由於處於中位的數字不影響回文（它總是與自己相等），所以我們可以簡單地將其去除。
     // return x == revertedNumber || x == revertedNumber / 10;
   }
 };

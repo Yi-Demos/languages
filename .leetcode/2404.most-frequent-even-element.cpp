@@ -8,8 +8,7 @@
 class Solution {
  public:
   int mostFrequentEven(vector<int>& nums) {
-    for (int i = 0; ) {
-
+    for (int i = 0;) {
     }
   }
 };

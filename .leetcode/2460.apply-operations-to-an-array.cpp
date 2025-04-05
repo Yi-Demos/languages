@@ -11,7 +11,8 @@ class Solution {
     int pointerIndex = 0;
 
     for (int i = 0; i < nums.size(); i++) {
-      cout << "i: " << i << " nums[i]: " << nums[i] << " nums[i + 1]: " << nums[i + 1] << endl;
+      cout << "i: " << i << " nums[i]: " << nums[i]
+           << " nums[i + 1]: " << nums[i + 1] << endl;
       if (nums[i] == nums[i + 1]) {
         nums[pointerIndex] = nums[i] * 2;
         i = i + 2;

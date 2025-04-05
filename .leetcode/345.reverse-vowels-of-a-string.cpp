@@ -4,7 +4,8 @@
  * [345] Reverse Vowels of a String
  */
 
-//  NOTE: The problem is swapping vowels with front and back instead of two front elements!
+//  NOTE: The problem is swapping vowels with front and back instead of two
+//  front elements!
 
 // @lc code=start
 class Solution {

@@ -14,7 +14,8 @@ class Solution {
       space complexity: O(n)
     */
 
-    if (isdigit(s[0]) == false && s[0] != ' ' && s[0] != '-' && s[0] != '+') return 0;
+    if (isdigit(s[0]) == false && s[0] != ' ' && s[0] != '-' && s[0] != '+')
+      return 0;
 
     bool isNagative = false;
     int signChecked = false;

@@ -15,12 +15,11 @@ int main() {
                       'o', 'r', 'l', 'd', '!', '\0'};
   char greetings2[] = "Hello World!";
 
-
   // reverse string
   string str = "Hello, World!";
   reverse(str.begin(), str.end());
 
-  string reversed_str(str.rbegin(), str.rend()); // 使用 rbegin 跟 rend
+  string reversed_str(str.rbegin(), str.rend());  // 使用 rbegin 跟 rend
 
   return 0;
 }

@@ -7,7 +7,6 @@
 // @lc code=start
 class Solution {
  public:
-  void solveSudoku(vector<vector<char>>& board) {
-  }
+  void solveSudoku(vector<vector<char>>& board) {}
 };
 // @lc code=end

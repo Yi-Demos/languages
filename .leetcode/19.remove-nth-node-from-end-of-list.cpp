@@ -76,7 +76,7 @@ class Solution {
 
     while (headerList != nullptr) {
       cout << headerList->val;
-      headerList=headerList->next;
+      headerList = headerList->next;
     }
 
     // int index = 0;

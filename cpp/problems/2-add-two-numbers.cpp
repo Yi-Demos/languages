@@ -13,8 +13,7 @@ class Solution {
   ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
     ListNode* node = new ListNode();
     ListNode* res = node;
-ß
-    int carry = 0;
+    ß int carry = 0;
 
     while (l1 || l2 || carry) {
       int sum = 0;

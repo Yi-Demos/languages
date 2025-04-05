@@ -4,45 +4,45 @@
  * [322] Coin Change
  */
 
- /*
+/*
 
-  coins = {1, 2, 5}
-  amount = 5
+ coins = {1, 2, 5}
+ amount = 5
 
-  init: dp = [0, ∞, ∞, ∞, ∞, ∞]
+ init: dp = [0, ∞, ∞, ∞, ∞, ∞]
 
-  for (int coin : coins)
-    coin = 1
-      dp = [0, 1, 2, 3, 4, 5]
-    coin = 2
-      dp = [0, 1, 1, 2, 2, 3]
-    coin = 5
-      dp = [0, 1, 1, 2, 2, 1]
+ for (int coin : coins)
+   coin = 1
+     dp = [0, 1, 2, 3, 4, 5]
+   coin = 2
+     dp = [0, 1, 1, 2, 2, 3]
+   coin = 5
+     dp = [0, 1, 1, 2, 2, 1]
 
 
-  coins = {2, 5}
-  amount = 10
+ coins = {2, 5}
+ amount = 10
 
-  init: dp = [0, ∞, ∞, ∞, ∞, ∞, ∞, ∞, ∞, ∞, ∞]
+ init: dp = [0, ∞, ∞, ∞, ∞, ∞, ∞, ∞, ∞, ∞, ∞]
 
-  for (int coin : coins)
-    coin = 2
-      dp = [0, ∞, 1, ∞, 2, ∞, 3, ∞, 4, ∞, 5]
-    coin = 5
-      dp = [0, ∞, 1, ∞, 2, 1, 3, ∞, 4, 2, 5]
+ for (int coin : coins)
+   coin = 2
+     dp = [0, ∞, 1, ∞, 2, ∞, 3, ∞, 4, ∞, 5]
+   coin = 5
+     dp = [0, ∞, 1, ∞, 2, 1, 3, ∞, 4, 2, 5]
 
-    dp[10] = min(dp[10], dp[10 - coin] + 1)
-    dp[9] = min(dp[9], dp[9 - coin] + 1)
-    dp[8] = min(dp[8], dp[8 - coin] + 1)
-    dp[7] = min(dp[7], dp[7 - coin] + 1)
-    dp[6] = min(dp[6], dp[6 - coin] + 1)
-    dp[5] = min(dp[5], dp[5 - coin] + 1)
-    dp[4] = min(dp[4], dp[4 - coin] + 1)
-    dp[3] = min(dp[3], dp[3 - coin] + 1)
-    dp[2] = min(dp[2], dp[2 - coin] + 1)
-    dp[1] = min(dp[1], dp[1 - coin] + 1)
+   dp[10] = min(dp[10], dp[10 - coin] + 1)
+   dp[9] = min(dp[9], dp[9 - coin] + 1)
+   dp[8] = min(dp[8], dp[8 - coin] + 1)
+   dp[7] = min(dp[7], dp[7 - coin] + 1)
+   dp[6] = min(dp[6], dp[6 - coin] + 1)
+   dp[5] = min(dp[5], dp[5 - coin] + 1)
+   dp[4] = min(dp[4], dp[4 - coin] + 1)
+   dp[3] = min(dp[3], dp[3 - coin] + 1)
+   dp[2] = min(dp[2], dp[2 - coin] + 1)
+   dp[1] = min(dp[1], dp[1 - coin] + 1)
 
-  */
+ */
 
 // @lc code=start
 class Solution {

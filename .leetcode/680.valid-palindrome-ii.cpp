@@ -16,7 +16,8 @@ class Solution {
         if (deleted) return false;
 
         // TRICK: don't use l++ or r-- in isPalindrome() params!
-        return isPalindrome(s, l+1, r, true) || isPalindrome(s, l, r-1, true);
+        return isPalindrome(s, l + 1, r, true) ||
+               isPalindrome(s, l, r - 1, true);
       }
     }
 

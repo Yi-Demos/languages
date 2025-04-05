@@ -11,9 +11,8 @@ int main() {
   vector<int> vec = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
   // 使用 remove_if 和 erase 移除所有奇數元素
-  vec.erase(
-      remove_if(vec.begin(), vec.end(), [](int x) { return x % 2 != 0; }),
-      vec.end());
+  vec.erase(remove_if(vec.begin(), vec.end(), [](int x) { return x % 2 != 0; }),
+            vec.end());
 
   // 輸出結果
   for (int x : vec) {

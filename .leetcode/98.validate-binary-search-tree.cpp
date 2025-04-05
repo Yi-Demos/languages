@@ -29,7 +29,7 @@ class Solution {
       space complexity: O(N)
     */
 
-    return validate(root,LONG_MIN, LONG_MAX);
+    return validate(root, LONG_MIN, LONG_MAX);
   }
 
  private:
@@ -37,7 +37,8 @@ class Solution {
     if (node == nullptr) return true;
     if (node->val >= max || node->val <= min) return false;
 
-    return validate(node->left, min, node->val) && validate(node->right, node->val, max);
+    return validate(node->left, min, node->val) &&
+           validate(node->right, node->val, max);
   }
 };
 // @lc code=end
