@@ -96,7 +96,7 @@ DFS
 
 104. Maximum Depth of Binary Tree 👉 DFS 的 Hello World | DONE
 695. Max Area of Island 👉 練習 grid 遍歷 & DFS
-112. Path Sum 👉 練習 DFS + 加總路徑邏輯
+112. Path Sum 👉 練習 DFS + 加總路徑邏輯 | DONE
 733. Flood Fill 👉 DFS 填色題，常出現在筆試
-257. Binary Tree Paths 👉 練 DFS 組路徑
+257. Binary Tree Paths 👉 練 DFS 組路徑 | DONE
 17. Letter Combinations... 👉 開始學 backtracking 的 DFS
