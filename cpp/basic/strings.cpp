@@ -21,5 +21,13 @@ int main() {
 
   string reversed_str(str.rbegin(), str.rend());  // 使用 rbegin 跟 rend
 
+  // substr
+  string s = "abcdef";
+
+  cout << s.substr(0, 3) << endl;  // "abc"
+  cout << s.substr(2, 2) << endl;  // "cd"
+  cout << s.substr(4) << endl;     // "ef"（從 index 4 開始取到結尾）
+  cout << s.substr(0) << endl;     // "abcdef"（從頭取到尾）
+
   return 0;
 }
