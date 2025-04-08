@@ -22,9 +22,9 @@ class Solution {
     for (int i = 1; i < n; ++i) {
       string intPart = s.substr(0, i);
       string decPart = s.substr(i);
-      if (isValidInteger(intPart) && isValidDecimal(decPart)) {
+
+      if (isValidInteger(intPart) && isValidDecimal(decPart))
         results.push_back(intPart + "." + decPart);
-      }
     }
 
     return results;
