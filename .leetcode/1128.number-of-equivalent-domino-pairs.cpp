@@ -22,7 +22,8 @@ class Solution {
       int a = domino[0];
       int b = domino[1];
 
-      if (a > b) swap(a, b); // 確保 a <= b，這樣 [a, b] 和 [b, a] 會有相同的鍵值
+      if (a > b)
+        swap(a, b);  // 確保 a <= b，這樣 [a, b] 和 [b, a] 會有相同的鍵值
 
       int key = a * 10 + b;
       ++count[key];

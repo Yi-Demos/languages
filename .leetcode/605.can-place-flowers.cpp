@@ -24,7 +24,7 @@ class Solution {
       if (isEmptyPos && isLeftEmpty && isRightEmpty) {
         count++;
 
-        flowerbed[i] = 1; // 種植，因此下一個就不能連續
+        flowerbed[i] = 1;  // 種植，因此下一個就不能連續
       }
     }
 

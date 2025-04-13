@@ -10,8 +10,8 @@ class Solution {
   int similarPairs(vector<string>& words) {
     /*
       Approach 1: Bitmask (Optimized)
-      time complexity: O(n*k) n：​字串陣列 words 中的字串數量 k：​每個字串的平均長度
-      space complexity: O(n)
+      time complexity: O(n*k) n：​字串陣列 words 中的字串數量
+      k：​每個字串的平均長度 space complexity: O(n)
     */
 
     unordered_map<int, int> maskCount;

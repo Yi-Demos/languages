@@ -100,3 +100,10 @@ DFS
 733. Flood Fill 👉 DFS 填色題，常出現在筆試
 257. Binary Tree Paths 👉 練 DFS 組路徑 | DONE
 17. Letter Combinations... 👉 開始學 backtracking 的 DFS | DONE
+
+------
+Bit
+
+[191] Number of 1 Bits
+漢明重量（Hamming Weight） 是指一個二進位字串中位元為 1 的個數。例如，字串 11101 的漢明重量為 4，因為其中有四個位元為 1。​
+[461] Hamming Distance

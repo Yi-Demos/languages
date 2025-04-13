@@ -19,10 +19,10 @@ class Solution {
     int sum = 0;
 
     for (int i = 1; i < timeSeries.size(); i++) {
-      sum += min(timeSeries[i] - timeSeries[i-1], duration);
+      sum += min(timeSeries[i] - timeSeries[i - 1], duration);
     }
 
-    sum+= duration;
+    sum += duration;
 
     return sum;
   }
