@@ -22,9 +22,9 @@ class Solution {
     for (int i = 0; i < n; i++) {
       if (s[i] == '(' || locked[i] == '0') {
         x++;
-      } else if (x) {
+      } else if (x) { // s[i] == ')' and locked[i] == '1'
         x--;
-      } else {
+      } else { // too many ')' encountered
         return false;
       }
     }
@@ -34,9 +34,9 @@ class Solution {
     for (int i = n - 1; i >= 0; i--) {
       if (s[i] == ')' || locked[i] == '0') {
         x++;
-      } else if (x) {
+      } else if (x) { // s[i] == '(' and locked[i] == '1'
         x--;
-      } else {
+      } else { // too many '(' encountered
         return false;
       }
     }
