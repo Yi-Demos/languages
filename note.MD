@@ -107,3 +107,18 @@ Bit
 [191] Number of 1 Bits
 漢明重量（Hamming Weight） 是指一個二進位字串中位元為 1 的個數。例如，字串 11101 的漢明重量為 4，因為其中有四個位元為 1。​
 [461] Hamming Distance
+
+------
+Backtracking
+基礎題目（適合初學者）
+46. Permutations 給定一個不含重複數字的序列，返回其所有可能的排列。
+77. Combinations 從 1 到 n 中選出 k 個數字的所有組合。
+78. Subsets 返回一個集合的所有子集（即幂集）。
+17. Letter Combinations of a Phone Number 給定數字字串，返回其對應的所有字母組合。
+39. Combination Sum 找出所有可以使數字和為目標值的組合，數字可重複使用。
+進階題目（挑戰更高難度）
+131. Palindrome Partitioning 將字串劃分為所有可能的回文子字串組合。
+93. Restore IP Addresses 復原給定字串所有可能的有效 IP 地址組合。
+51. N-Queens 在 n×n 的棋盤上放置 n 個皇后，使其彼此不攻擊。
+37. Sudoku Solver 解決數獨問題，填寫空格使其成為有效解。
+473. Matchsticks to Square 判斷是否可以將火柴棒組成一個正方形。
