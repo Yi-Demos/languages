@@ -29,5 +29,8 @@ int main() {
   cout << s.substr(4) << endl;     // "ef"（從 index 4 開始取到結尾）
   cout << s.substr(0) << endl;     // "abcdef"（從頭取到尾）
 
+  // find
+  int x = p.find("*");
+
   return 0;
 }
