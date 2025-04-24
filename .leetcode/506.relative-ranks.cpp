@@ -8,25 +8,36 @@
 class Solution {
  public:
   vector<string> findRelativeRanks(vector<int>& score) {
-    vector<string> res;
-    vector<int> sortedScores = score;
+    /*
+      Approach 1: Iterative
+      time complexity: O(nlogn)​
+      space complexity: O(n)
+    */
 
-    sort(sortedScores.begin(), sortedScores.end(), greater<int>());
+    priority_queue<pair<int, int>> pq;
 
-    for (int s : sortedScores) {
-      cout << s << endl;
+    for (int i = 0; i < score.size(); i++) {
+      pq.push({score[i], i});
     }
 
-    for (int s : score) {
-      if (s == sortedScores[0]) {
-        res.push_back("Gold Medal");
-      } else if (s == sortedScores[1]) {
-        res.push_back("Silver Medal");
-      } else if (s == sortedScores[2]) {
-        res.push_back("Bronze Medal");
+    int rank = 1;
+    vector<string> res(score.size());
+
+    while (!pq.empty()) {
+      auto [s, idx] = pq.top();
+      pq.pop();
+
+      if (rank == 1) {
+        res[idx] = "Gold Medal";
+      } else if (rank == 2) {
+        res[idx] = "Silver Medal";
+      } else if (rank == 3) {
+        res[idx] = "Bronze Medal";
       } else {
-        res.push_back(to_string(s));
+        res[idx] = to_string(rank);
       }
+
+      rank++;
     }
 
     return res;

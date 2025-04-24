@@ -36,5 +36,14 @@ int main() {
   print_queue(maxHeap);
   print_queue(minHeap);
 
+  //  get values in pair with priority_queue
+  priority_queue<pair<int, int>> heap;
+
+  auto [s, idx] = pq.top();  // C++17
+  // or
+  pair<int, int> p = pq.top();
+  int s = p.first;
+  int idx = p.second;
+
   return 0;
 }
