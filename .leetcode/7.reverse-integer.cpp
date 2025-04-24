@@ -9,35 +9,23 @@ class Solution {
  public:
   int reverse(int x) {
     /*
-      Approach 1: Hash
-      time complexity: O(n)
+      Approach 1:
+      time complexity: O(1)
       space complexity: O(1)
     */
 
-    bool isNegative = false;
+    long long lx = static_cast<long long>(x);
+    bool isNegative = lx < 0;
+    if (isNegative) lx = -lx;
 
-    if (x < 0) {
-      isNegative = true;
-      x * -1;
-    }
+    std::string xStr = std::to_string(lx);
+    std::reverse(xStr.begin(), xStr.end());
 
-    string xString = to_string(x);
+    long long res = std::stoll(xStr);
+    if (isNegative) res = -res;
 
-    int startIndex = 0;
-
-    while (xString[startIndex] == '0') {
-      startIndex++;
-    }
-
-    string xStringReversed = "";
-
-    for (int i = startIndex; i < xString.size() - startIndex; i++) {
-      xStringReversed.insert(0, 1, xString[i]);
-    }
-
-    int res = isNegative ? stoi(xStringReversed) * -1 : stoi(xStringReversed);
-
-    return res;
+    if (res > INT_MAX || res < INT_MIN) return 0;
+    return static_cast<int>(res);
   }
 };
 // @lc code=end
