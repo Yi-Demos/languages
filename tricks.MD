@@ -12,3 +12,10 @@ if (n & 1) {
 bool isPowerOfTwo(int n) {
     return n > 0 && (n & (n - 1)) == 0;
 }
+
+---
+移除 vector 相同的數字
+
+for (int n : unordered_set<int>(nums1.begin(), nums1.end())) {
+  m[n]++;
+}
