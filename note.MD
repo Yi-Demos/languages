@@ -12,6 +12,9 @@
 3.4. Depth-First Search
 3.5. Backtracking
 
+不錯的影片：
+https://www.youtube.com/watch?v=RYT08CaYq6A&t=1178s&ab_channel=AlgoMonster
+
 
 陣列（Array）相關題目：
 <!-- https://zansy.github.io/2019/08/27/leetcode-easy/ -->
@@ -136,3 +139,9 @@ list | 雙向鏈結串列 | 非連續 | ❌ 否 | ✅ 任意位置快 | 頻繁�
 需隨機存取，且主要在尾端操作：​使用 vector
 需在兩端頻繁插入/刪除，且需隨機存取：​使用 deque
 需在中間頻繁插入/刪除，且不需隨機存取：​使用 list
+
+------
+Linkedlist
+
+[24] Swap Nodes in Pairs
+[1721] Swapping Nodes in a Linked List
