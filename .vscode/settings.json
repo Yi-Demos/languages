@@ -69,7 +69,8 @@
     "stack": "cpp",
     "execution": "cpp",
     "memory": "cpp",
-    "print": "cpp"
+    "print": "cpp",
+    "regex": "cpp"
   },
   "compile-hero.disable-compile-files-on-did-save-code": false
 }
