@@ -46,7 +46,7 @@ class Solution {
     // return prev;
 
     /*
-      Approach 2: recursive
+      Approach 2: Recursive
       time complexity: O(n)
       space complexity: O(n)
     */
