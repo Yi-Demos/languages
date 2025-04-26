@@ -15,10 +15,10 @@ int main() {
   set<int, DescendingOrder> descendingSet = {5, 3, 8, 1, 4};  // cout: 8 5 4 3 1
 
   // 獲得 set 中第 k 大的元素
-  *next(ascendingSet.rbegin(), k - 1)
+  *next(ascendingSet.rbegin(), k - 1);
 
-   // 插入元素
-   mySet.insert(3);
+  // 插入元素
+  mySet.insert(3);
   mySet.insert(1);
   mySet.insert(4);
   mySet.insert(1);  // 重复元素，不会被插入
