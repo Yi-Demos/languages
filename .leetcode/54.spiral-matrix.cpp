@@ -23,7 +23,7 @@ class Solution {
     int left = 0;
     int right = matrix[0].size() - 1;
 
-    while (top <= botton && right >= left) {
+    while (top <= bottom && right >= left) {
       // 從左到右
       for (int i = left; i <= right; ++i) {
         res.push_back(matrix[top][i]);
@@ -56,6 +56,8 @@ class Solution {
         left++;
       }
     }
+
+    return res;
   }
 };
 // @lc code=end
