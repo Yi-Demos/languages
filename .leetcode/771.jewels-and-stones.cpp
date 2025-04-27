@@ -9,7 +9,7 @@ class Solution {
  public:
   int numJewelsInStones(string jewels, string stones) {
     /*
-      Approach: Brute force
+      Approach: Brute Force
       Time complexity: O(n * m)
       Space complexity: O(1)
     */
