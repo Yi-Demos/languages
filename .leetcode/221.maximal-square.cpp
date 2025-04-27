@@ -98,7 +98,7 @@ class Solution {
     // return maxSide * maxSide;
 
     /*
-      Approach 3: Dynamic Programming 2D to 1D
+      Approach 3: Dynamic Programming 2D to 1D (Optimized)
       time complexity: O(n*m)
       space complexity: O(n)
 
