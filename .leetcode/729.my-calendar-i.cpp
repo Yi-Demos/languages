@@ -15,7 +15,7 @@ class MyCalendar {
 
     // 檢查與下一個事件是否有重疊
     if (next != calendar.end() && next->first < endTime) return false;
-
+    cout << next->first << " " << next->second << endl;
     // 檢查與前一個事件是否有重疊
     if (next != calendar.begin()) {
       auto prev = std::prev(next);

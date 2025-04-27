@@ -30,8 +30,11 @@ int main() {
   // minHeap
   // ​如果使用 greater 作為比較函數，則 pop()
   // 會移除數值最小的元素
-  priority_queue<int, vector<int>, greater<int>> minHeap(nums.begin(),
-                                                         nums.end());
+  priority_queue<int, vector<int>, greater<int>> minHeap();
+
+  // 用 Lambda 客制比較
+  auto compare = [](auto a, auto b) { return a.first < b.first; };
+  priority_queue<int, vector<int>, decltype(compare)> minHeap();
 
   print_queue(maxHeap);
   print_queue(minHeap);
