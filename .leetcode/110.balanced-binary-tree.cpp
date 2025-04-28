@@ -1,7 +1,7 @@
 /*
- * @lc app=leetcode id=104 lang=cpp
+ * @lc app=leetcode id=110 lang=cpp
  *
- * [104] Maximum Depth of Binary Tree
+ * [110] Balanced Binary Tree
  */
 
 // @lc code=start
@@ -19,13 +19,11 @@
  */
 class Solution {
  public:
-  int maxDepth(TreeNode* root) {
-    if (root == nullptr) return 0;
+  bool isBalanced(TreeNode* root) {
+    if (root == nullptr) return false;
+    if (root->left || root->right) isBalanced(root->left) && isBalanced(root->right);
 
-    int l = maxDepth(root->left);
-    int r = maxDepth(root->right);
-
-    return max(l, r) + 1;
+    return true;
   }
 };
 // @lc code=end

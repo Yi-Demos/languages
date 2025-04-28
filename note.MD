@@ -126,8 +126,6 @@ Backtracking
 37. Sudoku Solver 解決數獨問題，填寫空格使其成為有效解。
 473. Matchsticks to Square 判斷是否可以將火柴棒組成一個正方形。
 
-
-
 容器類型 | 儲存結構 | 記憶體配置 | 支援隨機存取 | 插入/刪除效率 | 適用情境
 array | 固定大小陣列 | 連續 | ✅ 是 | ❌ 不支援 | 已知大小的靜態陣列
 vector | 動態陣列 | 連續 | ✅ 是 | 🚫 中間慢 | 頻繁在尾端插入/刪除，需隨機存取
@@ -145,3 +143,8 @@ Linkedlist
 
 [24] Swap Nodes in Pairs
 [1721] Swapping Nodes in a Linked List
+
+------
+Deque
+
+[239] Sliding Window Maximum
