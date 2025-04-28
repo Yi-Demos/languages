@@ -19,3 +19,16 @@ bool isPowerOfTwo(int n) {
 for (int n : unordered_set<int>(nums1.begin(), nums1.end())) {
   m[n]++;
 }
+
+---
+char 轉 int
+
+'8' - '0'
+
+string 轉 int
+
+atoi() 或 stoi()
+
+int 轉 string
+
+to_string()
